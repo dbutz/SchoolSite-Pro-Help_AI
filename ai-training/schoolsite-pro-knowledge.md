@@ -68,13 +68,15 @@ Image: SchoolSite Pro runs as an extension inside ArcGIS Pro.
 
 ### Installation & System requirements
 
-SchoolSite Pro works as a configuration to ArcGIS Pro. You must install ArcGIS Pro first in order to install SchoolSite Pro. Please visit Esri’s  website for detailed instructions on how to install ArcGIS Pro, including system requirements and Esri’s  licensing information.
+SchoolSite Pro works as a configuration to ArcGIS Pro. **You must install ArcGIS Pro first** in order to install SchoolSite Pro. Please visit Esri’s  website for detailed instructions on how to install ArcGIS Pro, including system requirements and Esri’s  licensing information.
 
 SchoolSite Pro system requirements generally follow the same requirements as specified for ArcGIS Pro in terms of required memory, CPU, and graphics abilities. Please refer to Esri’s  documentation and whenever possible, use a computer that exceeds the minimum requirements.
 
-SchoolSite Pro currently works with Windows 10 or Windows 11 and is built for the latest version of ArcGIS Pro. It will most likely work with previous minor releases. For example, if SchoolSite Pro is built on ArcGIS Pro 3.3 then it should work with any 3.x release such as 3.0 or the not yet released 3.3 or 3.4 in the future.
+**SchoolSite Pro currently works with Windows 10 or Windows 11 and is built for the latest version of ArcGIS Pro. It will most likely work with previous minor releases. For example, if SchoolSite Pro is built on ArcGIS Pro 3.3 then it should work with any 3.x release such as 3.0 or the not yet released 3.3 or 3.4 in the future.**
 
 You can download the latest version of SchoolSite Pro from this website, look for the Download SchoolSite Pro button in the top banner.
+
+Image: Click the Download SchoolSite Pro button to download the latest version.
 
 ### Licensing for SchoolSite Pro
 
@@ -86,6 +88,7 @@ SchoolSite Pro uses a single-user licensing model on a subscription basis. A lic
 - Where can I obtain data?
 - How should I organize my data?
 - What are study areas?
+- For ArcGIS Pro Installation?
 
 ## Manage data
 
@@ -3422,302 +3425,269 @@ Image: Export the student summary for the active plan or forecast.
 
 FY26 Q4 Update 10 - Patch.
 
-- Quick patch to fix an issue when calculating mobility that broke at 1.9.6.
+- Quick patch to fix an issue when calculation mobility that broke at 1.9.6
 
 ### Version 1.9.6 (September 2026)
 
 FY26 Q4 Update 9.
 
-- New: Utilization Report. This is now an automated report and is used to set up boundary comparison web apps during a rezoning project.
-- Export SYF reports during Data Setup.
-- Added a CAPACITY field to the automated attendance matrix Excel file.
-- Additional residential forecasting charts are available with an optional checkbox during Report Setup.
-- Additional student types that can be added to the automated attendance matrix are only available if they exist in imported student data, just like Create Plan.
-- Improved Address Directory creation performance. It is now roughly twice as fast.
-- Updated the Project Summary Report based on feedback from Cameron and the standardization team.
-- Reassigning study areas by closest school, capacity, or maximum limit now allows one or more schools to be excluded from the process.
-- SYF calculations are available only when importing Assessor data with polygon geometry.
-- Added a warning when calculating a forecast if Projected Housing Units have no corresponding SYF values.
-- Fixed an issue with Esri travel modes that could break walk-zone creation.
-- The Tapestry Segmentation report was deprecated and a new version was added.
-- When assigning study areas in a plan based on a forecast, the forecast year can no longer be changed in the stats window. Saving that change would lock in assignments and remove the Undo option.
-- Additional minor bug fixes and UI improvements.
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
 
 ### Version 1.9.5 (July 2026)
 
 FY26 Q4 Update 8.
 
-- Users can choose a school to remove, and its study areas are automatically assigned to Unassigned.
-- Forecast report exports now include the tabular data and chart in the same file.
-- Improved forecast calculation performance.
-- Improved performance when calculating year 12 of the projected housing units table.
-- Additional minor bug fixes and UI improvements.
+- User can choose a school to remove, and it will automatically assign those study areas to ‘Unassigned’
+- Exporting a forecast report includes the tabular data and chart in the same file
+- Improve performance of calculating a forecast
+- Improve performance when calculating year 12 of the projected housing units table
+- Additional misc. minor bug fixes and UI improvements
 
 ### Version 1.9.4 (June 2026)
 
 FY26 Q3 Update 7. Introducing new reporting features for residential forecasts.
 
-- SYF Automation uses parcel data to automatically generate student yield factors for new housing units.
-- The Statistics Window can sort by any column and scale or zoom for improved readability.
-- Added data validation to check consistency between student types across historical student data.
-- A plan can be locked to prevent further study-area reassignments.
-- School layers in a plan map now have Map Tips enabled by default.
-- The study-area numbering tool was recreated from ArcMap.
-- Forecasts can be summarized on any available study-area field, including CITY, ZIP, or other grouping fields.
-- Plans with Enrollment now use all student types in the Current tab, matching the Estimated Enrollment tab methodology.
-- Additional minor bug fixes and UI improvements.
+- [object Object]
+- [object Object]
+- [object Object]
 
 ### Version 1.9.3 (January 2026)
 
 FY26 Q2 Update 6. Introducing new reporting features for residential forecasts.
 
-- Show the codes chosen for unit types 1-6 on the projected units, SYF, and MSYF pages.
-- The Forecast Report dock pane can summarize selected study-area features.
-- Demographic Reports can be created for all polygons in a feature class.
-- Fixed a plan-based-on-forecast stats window issue where year 0 did not include other STUTYPES included in the forecast (SSP-230).
-- Fixed forecast reports for grade ranges -1-6 and -1-12, which previously could not parse the two dash characters (SSP-231).
-- Additional minor bug fixes and UI improvements.
+- Show the codes chosen for unit types 1-6 on the projected units, SYF and MSYF pages
+- In Forecast Report dock pane, add ability to summarize selected study area features
+- Allow Demographic Reports to be created for All Polygons in a feature class.
+- Fixed bug in plans based on forecast where the stats window's data for year 0 (current year) did not include other STUTYPES that were included in the forecast (SSP-230)
+- Fixed issue in forecast reports that did not accept a grade range of -1-6 or -1-12 because it could not correctly parse the two dash characters (SSP-231)
+- Minor bugs and UI improvements
 
 ### Version 1.9.2 (January 2026)
 
 FY26 Q2 Update 5. Introducing a new Walk Zone tool.
 
-- Generate walk-zone polygons around school points at any distance or time, such as 1, 3, or 5 miles and 5, 10, or 15 minutes.
-- Fixed a street and address directory issue when schools have STRT_GRD of -2 (SSP-212).
-- Added the option to open the Address Directory from Pro after exporting.
-- Fixed SSP-215, which prevented a plan-based-on-forecast stats window from updating after viewing another student attribute and then selecting grade distribution and a future forecast year.
+- Generate walk zone polygons around school points at any distance or time (e.g. 1, 3, 5 mile distances or 5, 10, 15 minutes) for use in analysis for your district.
+- Fixed bug in street/address directories when schools have STRT_GRD of -2 (SSP-212)
+- Added ability to prompt user to open the Address Directory from Pro after exporting, rather than make them browse to the folder first.
+- Fixed bug SSP-215 that did not update the stats window of plan based on a forecast after viewing other student attribute and then selecting grade distribution and a forecast year in the future (numbers did not reflect the future forecasted year's data)
 
 ### Version 1.9.1 (December 2025)
 
 FY26 Q1 Update 4.
 
-- Fixed Rate of Change enrollment forecasts that produced no results for grades 10, 11, and 12.
-- Enabled the Currently selected study areas on map option in a factor dock pane when features are selected.
-- Fixed an issue when closing a forecast factor that left the table open.
-- Updated data-validation messaging to clarify students enrolled outside the grades served by the district.
+- Fixed issue with Rate of Change enrollment forecast that caused no results to be created for grades 10, 11, and 12
+- Fixed issue that prevented the 'Currently selected study areas on map' option from being enabled in a factor dockpane when features were selected
+- Fixed issue with closing a forecast factor that would leave the table open
+- Updated the phrasing of a data validation message to make it more clear (regarding students enrolled outside the grades that the District serves)
 
 ### Version 1.9.0 (December 2025)
 
 FY26 Q1 Update 3. Introducing Sync Plans and more.
 
-- Added an option to sync changes between multiple residence and forecasted-student plans.
-- Plan syncing pushes boundary reassignments, Reassign Study Area changes, new or existing schools, and capacity updates.
-- The Statistics Window can be summarized by Student Attribute in a forecasted-data plan.
-- Added SHIFT to add study areas and CTRL to remove study areas during reassignment selection.
-- Fixed unexpected clearing of feature selections.
-- Updated the Statistics Window title to include the plan name when multiple maps are open.
-- Updated the Rate of Change enrollment forecast methodology so K uses the same Direct Rate of Change formula as PK.
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
 
 ### Version 1.8.9 (November 2025)
 
 FY26 Q1 Update 2. Introducing Rate of Change enrollment forecasts and the study-area ID tool for forecasts.
 
-- Added the Rate of Change enrollment forecast method alongside Transfer Pattern.
-- Rate of Change applies to schools with boundaries; schools without boundaries continue to use Transfer Pattern.
-- Added a forecast Study Area ID tool that shows applied factors and forecast results in one click.
-- Plan overlays can now contain more than one overlay and are removed only when Do not overlay another plan is selected.
-- Added tooltips and explanation labels for Data Enrichment and Enrollment Forecast tools.
-- Added help information, UI updates, and fixes for copying and renaming plans and forecasts.
-- Updated Data Enrichment tooltips, screenshots, and UI labels.
-- Added a SchoolSite ribbon Help button linking to the web help documents.
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
 
 ### Version 1.8.8 (October 2025)
 
 FY26 Q1 Update 1. Introducing the Automated Attendance Matrix feature.
 
-- Fixed lowercase grade-range input such as k-6.
-- Added an option to include SE students in the automated attendance matrix.
-- Enforced short integer input values to prevent values too large for the destination table.
-- Changed a data validation from error to warning when a school serves a grade with no enrolled students.
-- Added a warning for overlapping school coverage such as K-6 elementary and 6-8 middle schools sharing grade 6.
+- [object Object]
+- [object Object]
 
 ### Version 1.8.7 (October 2025)
 
 FY26 Q1 release. Introducing the Automated Attendance Matrix feature.
 
-- Create an attendance matrix using GE students by defining grade ranges for each grade level in the study-area data.
-- The Data Enrichment tool now enriches current study areas and plans with forecasted student counts.
-- Imported historical student data now includes school name and code of residence and school name of enrollment.
-- Added validation to check that students are in grades served by district attendance-boundary schools.
-- Minor UI updates and tooltip improvements.
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
 
 ### Version 1.8.6 (Earlier release)
 
-Introducing Program Re-assignment and expanded data validation.
+Introducing Program Re-assignment feature.
 
-- Import, add, delete, and reassign programs such as special education, music, and dual language.
-- The Statistics Window shows modified capacity after program seats are reserved.
-- Added validation for gaps in grade-range coverage, students enrolled outside a school's grades, and schools serving grades with no enrolled students.
-- Several improvements and bug fixes for Plans with Enrollment, plus minor UI and tooltip updates.
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
 
 ### Version 1.8.5 (Earlier release)
 
-Pre-Fall revisions.
+Pre-Fall revisions
 
-- Bug fixes for Plans with Enrollment.
-- Student enrichment now adds school-of-enrollment and school-of-residence fields to imported data.
-- Added help information and a new background on load.
-- Added Copy for plans and forecasts.
-- Capacity changes can be saved back to imported schools for future plans.
-- Updated forecast rendering, bypass warning behavior, and new-school target assignment.
+- Bug fixes to plans with enrollment
+- Student enrichment to imported data and original source to add fields defining school of enrollment and school of residence
+- More help information
+- New background on load
+- New 'Copy' button for plans/forecasts
+- Changes to capacity can be saved back to imported schools for future plans
+- Updates to rendering a forecast to alter alias of DISPLAY for Map Contents window
+- Bypass warning message option enabled
+- New schools in a plan automatically becomes target school for assignment
 
 ### Version 1.8.4 (March 2025)
 
-Pre-Fall upgrades.
+Pre-Fall upgrades
 
-- Updates and bug fixes for Plans with Enrollment.
-- Added read-only mode for forecasts to lock in factors.
-- Forecast appearance is labeled to describe current settings.
-- Updated help icons and tooltip information.
-- Improved Address Directory compatibility across Student Information Systems.
-- Reset Project can reset only Address Directory information instead of all data.
+- Updates and bug fixes to plans with enrollment
+- Read-only mode for forecasts to lock in factors
+- Forecast appearance labeled to describe current settings
+- New and updated help and tooltip icons and information
+- Address directory upgrades for more compatibility across different Student Information Systems
+- Reset Project tool now offers just to reset address directory information instead of all data
 
 ### Version 1.8.3 (April 2025)
 
-Plans with Enrollment. Internal-only release for testing.
+Plans with enrollment (April 2025 - internal only release for testing)
 
-- First release that creates plans showing residence and enrollment counts.
-- Minor UI updates and improvements.
-- Fixed a hang when closing SchoolSite Pro from the start page.
-- Added buttons to show plan and forecast comments.
-- Updated help icons for a more consistent appearance.
-- Excel reports prompt users to open them after export.
+- First release that will create plans showing both residence and enrollment counts
+- Minor UI updates and improvements
+- Fixed issue when closing SchoolSite Pro from start page which caused it the hang requiring a force close
+- New buttons to show plan/forecast comments to review how they were setup/configured
+- Update help icons for better, more consistent look across tools
+- Excel reports prompt the user to open them after export, which auto launches Excel and opens the report
 
 ### Version 1.8.2 (March 2025)
 
 Address Directory updates.
 
-- Updated Address Directory output to include MID_, prefix direction, prefix type, and suffix direction.
+- Updated address directory output to include: MID_, prefix direction, prefix type, suffix direction
 
 ### Version 1.8.1 (February 2025)
 
-Street and Address Directory release.
+Street/Address Directory release
 
-- Limited special characters in plan and forecast names to prevent tool issues.
-- Updated tooltips and help links.
-- Updated Street and Address Directory tools based on beta feedback from 1.8.0.
+- Updated error checking to prevent issues in various tools by limiting special characters used in plan and forecast names
+- Updated tooltips and help links with more to come across the application
+- Updates, UI tweaks, and bug fixes to Street/Address Directories based on feedback from the beta released at 1.8.0
 
 ### Version 1.8.0 (February 2025)
 
-Internal-only release.
+Internal only release (February 2025)
 
-- Beta release of Street and Address Directory tools for internal testing.
-- MGT branding updates.
-- Added a Help button and contextual help icons.
-- Various Start Page UI, alignment, and layout improvements.
-- Updated enrollment forecast Excel formatting.
+- Beta release of street/address directory tools for internal testing
+- MGT branding updates
+- New help button and contextual help icons to help users navigate to https://ssphelp.mgt.us/
+- Various UI updates, alignments, layout improvements especially on the Start Page
+- Enrollment forecast Excel formatting updates for better consistency
 
 ### Version 1.7.9 (August 2024)
 
 August release.
 
-- Fixed a bug introduced with ArcGIS Pro 3.3 when using the Plan Impact Summary report.
+- Fixed bug introduced with ArcGIS Pro 3.3 when using Plan Impact Summary report
 
 ### Version 1.7.8 (August 2024)
 
 August release.
 
-- Fixed a bug when copying a forecast.
-- Updated enrollment forecast and Excel export formatting for consistency with residence forecasts and template guidelines.
+- Fixed bug when copying a forecast
+- Updated format for enrollment forecasts and Excel export to be more consistent with residence forecasts and align with template guidelines
 
 ### Version 1.7.7 (July 2024)
 
 ArcGIS Pro 3.3+ only.
 
-- Fixed ArcGIS Pro 3.3 limited-field-name issues that caused report and table Excel exports and historical-student imports to fail.
-- Added street-data import in preparation for the Street Directory tool.
+- Fixed additional bugs related to limited field names in ArcGIS Pro 3.3 causing exporting reports/tables to Excel to fail such as the statistics window and causing importing of historical student to fail when calulating mobility
+- Added ability to import street data in preparation for street directory tool
 
 ### Version 1.7.6 (July 2024)
 
 ArcGIS Pro 3.3+ only.
 
-- Minor UI updates.
-- Released Data Enrichment tools for tract data, estimated students, and forecasted study-area data.
-- Fixed a Reset Project issue that caused missing TYPE2 units.
-- Added school capacity to forecast reports for attendance-area reporting and Excel output.
+- Minor UI updates
+- Data Enrichment Tools released to enrich tract data with estimated number of students based on units and SYF. Also creates enriched study area data with numbers of forecasted students in each area.
+- Reset Project bug fixed that lead to missing TYPE2 units being imported
+- Added Capacity for each school in forecast report when reporting on attendance areas and formatted for output in Excel
 
 ### Version 1.7.5 (November 2023)
 
-Bug-fix release.
-
-- Fixed a problem when importing historical students.
+- Fixed problem when importing historical students
 
 ### Version 1.7.4 (November 2023)
 
-Bug-fix release.
-
-- Fixed assignment of study areas to the target school in copied or renamed plans.
+- This build fixes an issue preventing the assignment of study areas to the target school in plans that have been copied and/or renamed.
 
 ### Version 1.7.3 (November 2023)
 
-Bug-fix release.
-
-- Fixed plan labeling, forecast symbolization, selected-study-area data in boundary planning, grade-range changes in the Statistics Window, and first-open forecast error messages.
+- Bugs fixed for labeling in plans
+- Bugs fixed for symbolizing a forecast
+- Bugs fixed for showing the data about the selected study areas in a plan when boundary planning
+- Bugs fixed for changing which grade ranges are shown in the statistics table
+- Bugs fixed for error messages that are shown when a forecast was first created
 
 ### Version 1.7.2 (October 2023)
 
-Student Yield Factor and enrollment forecast updates.
-
-- Expanded Student Yield Factors from PK, K-6, 7-8, and 9-12 to individual grades PK through 12.
-- Added alphabetical enrollment forecast sorting.
-- Fixed bugs in Remove Unassigned Schools and Plan Summary.
+- Student yield factors have been expanded from just PK, K-6, 7-8, 9-12 to PK through 12 with all individual grades.
+- New sorting of enrollment forecasts allows straight alphabetical sorting instead of grouping elementary first followed by middle and high and then listed alphabetically in those groups.
+- Fixed bugs when using Remove Unassigned Schools and Plan Summary
 
 ### Version 1.7.1 (August 2023)
 
-Planning, validation, and reporting updates.
-
-- Added Reset Geodatabase to remove imported data and maps and start over in the same project.
-- Replaced predefined plan-statistics and forecast-report grade ranges with a flexible grade-range textbox.
-- Added warnings for layers with definition expressions during Data Setup.
-- Changed references from Maturation to Buildout and added Buildout as a forecast appearance option.
-- Fixed historical-student validation, forecast recalculation, and mobility-report export issues.
+- New feature: Reset Geodatabase allows the user to delete all imported data and maps that have plans or forecasts to start over with new data in the same project
+- Plan statistics and forecast reports no longer have pre-defined grade ranges of K-6,7-8,9-12. It only has a grade range textbox for easier entry
+- Layers that have definition expressions are flagged during Data Setup as warnings to alert the user
+- Changed all references of Maturation to Buildout
+- In Forecasts, under Appearance, you are now able to symbolize resident student change to have its end year as Buildout.
+- Bug fixes related to data setup for historical students
+- Bug fixes for when enrollment forecast would indicate changes were made to resident forecast when they had not been forcing an unneeded recalculation of the enrollment forecast
+- Bug fixes when exporting mobility reports.
 
 ### Version 1.7.0 (February 2023)
 
-Updated start page and planning workflow improvements.
-
-- Updated the start page to improve access to previous projects.
-- Fixed issues with plan exports, license-expiration warnings, enrollment forecasts, reassignment by current boundaries, rounding, and Plan Summary reports.
-- Fixed missing grade ranges in Forecast Report setup.
+- Updated start page for improved ability to find previous Projects
+- Fixed bugs found when working with specific datasets related to features such as: Exporting plans; Warning when the license is about to expire; Enrollment forecasts; Reassign by current boundaries
+- Improved rounding to avoid really long decimal values
+- Plan Summary report
+- Forecast report setup was missing grade ranges on occasion
 
 ### Version 1.6.9 (December 2022)
 
-Forecast bug-fix release.
-
-- Fixed bugs when making a forecast.
+- Fixed bugs when making a forecast
 
 ### Version 1.6.8 (December 2022)
 
-Forecast reporting and enrollment forecast updates.
-
-- Fixed forecast report exports to text and Excel formats.
-- Improved rounding in the Plan Statistics Window.
-- Updated enrollment forecast refresh messaging after residential forecast changes.
-- Added a warning for significant year-to-year enrollment gaps.
-- Improved elementary sorting so PK and K are grouped together.
-- Improved handling of custom grade ranges in plan statistics and Forecast Report setup.
+- Fixed bugs preventing the successful export of forecast reports to both text and Excel formats
+- Improved the rounding of values in the plan stats window so they would not exceed two decimal points
+- Updated the messaging around enrollment forecasts to make sure the report indicates that it needs to be refreshed after changes are made to residential forecast values. This message would previously disappear too soon.
+- Enrollment forecasts now show a warning when it detects that a school has had a significant gap in enrollment from year to year to indicate that the resulting forecasted values could be negatively impacted.
+- When sorting the forecast enrollment report by grade to show elementary first, then middle, followed by high....it now considers PK and K to be the same value for sorting purposes so you don't get PK-6 followed by K-6. Those are both considered 'elementary' and are in the same grouping in the report.
+- Better handling of 'custom' grade ranges in plan statistics and forecast report setup. Custom ranges no longer accepts grade ranges that are already available via checkbox (i.e. K-6 is not 'custom', just select it from the set of pre-defined grade ranges. Use 'custom' for things like K-4 or 6-8.
 
 ### Version 1.6.7 (December 2022)
 
-Forecast report ordering and summary updates.
-
-- Schools are ordered by grade and then name.
-- Reworded messages for schools excluded from reports.
-- Added a total enrollment summary line to the top of the report.
+- Schools are ordered in the report first by grade, then by name so the elementary schools are grouped alphabetically followed by middle schools, etc…
+- Messages when schools are excluded from reports are re-worded to make more sense as to why they could not be forecasted
+- Added total enrollment summary line to the top of the report
 
 ### Version 1.6.6 (November 2022)
 
-Report formatting and student-data updates.
-
-- Improved report formatting on screen and in Excel.
-- Fixed staffing forecast calculations for students transferring out of PK in boundary schools.
-- Fixed the Project Summary report DEVELOPER field lookup.
-- Fixed development summary exports when study areas had no early-year development.
-- Updated Student Report summaries by STUTYPE and GRD.
+- Various enhancements to formatting of reports both on screen and when exported to Excel
+- Bug fix for staffing forecast when calculating the students transferring out of the PK grade in boundary schools
+- Fixed bug in the Project Summary report that caused it to not find the required DEVELOPER field
+- Fixed issue where maturation units were not included in a development summary excel report in cases where a studyarea had zero development in years one thru ten but then had development beyond that.
+- Updated Student Report to summarize an accounting of student data to give insight into what students were in the file, which were in district, and which were used in the plan or forecast broken down by STUTYPE and GRD
 
 ### Version 1.6.5 (October 2022)
 
-Built for ArcGIS Pro 3.0. First release out of beta.
-
-- Built for ArcGIS Pro 3.0.
-- First release out of beta.
+- Built for ArcGIS Pro 3.0
+- First release out of beta
