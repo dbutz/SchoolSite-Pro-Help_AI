@@ -28,10 +28,11 @@ Add new tools directly to `window.SCHOOL_SITE_TOOLS` in `js/data.js`. Keep the s
 
 Use an exact screenshot from `assets/images/Tools` when one exists. If there is no exact screenshot, use the image that represents the tool group, such as `statistics_group.png`, `school_program_group.png`, or `draw_assignment_group.png`. Put the image directly in the tool's `content` array; do not create a separate image updater or mapping function. The existing renderer will automatically apply the standard image, heading, paragraph, and list styling.
 
-## New release procedure
+## Add a release
 
-1. Create and upload the signed installer to a GitHub release.
-2. Open `js/data.js` and update only these values in `window.SCHOOL_SITE_RELEASE`:
+Use `js/data.js` when adding a release. There are two places to update:
+
+1. Update the current release information:
 
 ```js
 version: "1.9.8",
@@ -39,32 +40,44 @@ releaseDate: "New release date",
 downloadUrl: "New installer URL"
 ```
 
-3. Add the new release notes object at the top of `window.SCHOOL_SITE_RELEASE_NOTES`. Keep all older entries unchanged.
-
-Use this format so the release notes page automatically displays the new release as a separate entry:
+2. Add a new object at the top of `window.SCHOOL_SITE_RELEASE_NOTES`. Copy this example and replace the text:
 
 ```js
 {
-	version: "1.9.8",
-	date: "October 2026",
-	description: "Short summary of the release.",
-	features: [
-		"One feature or fix.",
-		"Another feature or fix."
-	]
+  version: "1.9.8",
+  date: "October 2026",
+  description: "Short summary of the release.",
+  features: [
+    { type: "heading", text: "New Features:" },
+    { type: "list", items: [
+      "First feature or fix.",
+      {
+        text: "Feature with more detail:",
+        subitems: [
+          "Additional detail.",
+          "Another detail."
+        ]
+      }
+    ] },
+    { type: "heading", text: "Minor bugs and UI improvements" },
+    { type: "list", items: [
+      "One bug fix.",
+      "Use **bold text** when needed."
+    ] }
+  ]
 },
 ```
 
-Put each feature or fix in its own `features` item. Do not add release text to the legacy `Release Notes` document body in `js/data.js`.
-4. Run the checks:
+Keep older release objects unchanged. The page formats headings, bullets, nested bullets, bold text, and quotation marks automatically. Do not change CSS or `index.html` for a new release.
+
+3. Run the checks:
 
 ```powershell
 node --check .\js\data.js
 git diff --check
 ```
 
-5. Open `index.html#download` and verify the version, date, and installer link. Also check the overview button navigates to the download page.
-6. Commit and push the updated files.
+4. Open `index.html#download` and verify the version, date, and installer link.
 
 The header, footer, overview build labels, download page, installer link, and GitHub link read from the central release configuration automatically.
 

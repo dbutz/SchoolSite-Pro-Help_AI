@@ -89,10 +89,11 @@ window.SCHOOL_SITE_DOCS = [
       [
         "Installation & System requirements",
         [
-          { "type": "paragraph", "text": "SchoolSite Pro works as a configuration to ArcGIS Pro. You must install ArcGIS Pro first in order to install SchoolSite Pro. Please visit Esri’s  website for detailed instructions on how to install ArcGIS Pro, including system requirements and Esri’s  licensing information." },
+          { "type": "paragraph", "text": "SchoolSite Pro works as a configuration to ArcGIS Pro. **You must install ArcGIS Pro first** in order to install SchoolSite Pro. Please visit Esri’s  website for detailed instructions on how to install ArcGIS Pro, including system requirements and Esri’s  licensing information." },
           { "type": "paragraph", "text": "SchoolSite Pro system requirements generally follow the same requirements as specified for ArcGIS Pro in terms of required memory, CPU, and graphics abilities. Please refer to Esri’s  documentation and whenever possible, use a computer that exceeds the minimum requirements." },
-          { "type": "paragraph", "text": "SchoolSite Pro currently works with Windows 10 or Windows 11 and is built for the latest version of ArcGIS Pro. It will most likely work with previous minor releases. For example, if SchoolSite Pro is built on ArcGIS Pro 3.3 then it should work with any 3.x release such as 3.0 or the not yet released 3.3 or 3.4 in the future." },
-          { "type": "paragraph", "text": "You can download the latest version of SchoolSite Pro from this website, look for the Download SchoolSite Pro button in the top banner." }
+          { "type": "paragraph", "text": "**SchoolSite Pro currently works with Windows 10 or Windows 11 and is built for the latest version of ArcGIS Pro. It will most likely work with previous minor releases. For example, if SchoolSite Pro is built on ArcGIS Pro 3.3 then it should work with any 3.x release such as 3.0 or the not yet released 3.3 or 3.4 in the future.**" },
+          { "type": "paragraph", "text": "You can download the latest version of SchoolSite Pro from this website, look for the Download SchoolSite Pro button in the top banner." },
+          {"type":"image","src":"assets/images/download.png","alt":"Download SchoolSite Pro button","caption":"Click the Download SchoolSite Pro button to download the latest version."}
         ]
       ],
       [
@@ -121,7 +122,9 @@ window.SCHOOL_SITE_DOCS = [
             "text": "What are study areas?",
             "href": "#doc/study-areas",
             "onClick": "event.preventDefault(); route('doc', 'study-areas');"
-          }
+          },
+          { "text": "For ArcGIS Pro Installation?", "href": "https://doc.esri.com/en/arcgis-pro/latest/get-started/install-and-sign-in-to-arcgis-pro.html" },
+
         ] }
       ]
     ]
