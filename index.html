@@ -1159,12 +1159,26 @@ function renderReleaseNotes() {
          <time>${escapeHtml(release.date)}</time>
        </div>
        <p class="release-note-description">${escapeHtml(release.description)}</p>
-       ${release.features.length ? `<ul>${release.features.map(feature => `<li>${escapeHtml(feature)}</li>`).join('')}</ul>` : '<p class="release-note-empty">No additional feature notes were recorded for this release.</p>'}
+      ${renderReleaseFeatures(release)}
      </section>
    `).join('')}
  </div>
  <div class="article-nav"><button class="secondary" onclick="route('docs')">← All documentation</button><button class="primary" onclick="route('download')">Download latest build →</button></div>
  </article></section>`;
+}
+
+function renderReleaseFeatures(release) {
+ const features = Array.isArray(release.features) ? release.features : [];
+ if (!features.length) {
+   return '<p class="release-note-empty">No additional feature notes were recorded for this release.</p>';
+ }
+
+ const hasStructuredFeatures = features.some(feature => feature && typeof feature === 'object');
+ if (hasStructuredFeatures) {
+   return features.map(feature => renderStructuredBlock(feature)).join('');
+ }
+
+ return `<ul>${features.map(feature => `<li>${formatInlineRichText(feature)}</li>`).join('')}</ul>`;
 }
 
 /* Toolkit browsing and category filtering. */
