@@ -1589,7 +1589,7 @@ window.SCHOOL_SITE_DOCS = [
         { "type": "list", "items": [
           "The spelling of each required field must match the field names shown in the help documentation.",
           "Any null values in required fields should be converted to an empty string before using the data.",
-          "SchoolSite Pro does not support special characters such as periods, commas, ampersands, dashes, or slashes in required fields.",
+          "SchoolSite Pro does not support special characters such as periods, commas, ampersands, dashes, or slashes in required fields etc(i.e. .,&-/`~) in any field in any dataset.",
           "If a field is defined as a short integer, it cannot contain values longer than four digits. Use a long integer if you need larger values."
         ] }
       ],
@@ -3301,11 +3301,11 @@ window.SCHOOL_SITE_DOCS = [
       [
         "Map Datasets for Use with SchoolSite Pro",
         [
-          { "type": "paragraph", "text": "In order to use the SchoolSite Pro Extensions, you must have the following required map datasets:" },
+          { "type": "paragraph", "text": "In order to use the SchoolSite Pro Extensions, you must have the following **required** map datasets:" },
           { "type": "ordered", "items": [
-            "Study Areas - A polygon dataset of the district showing planning areas coded by school attendance areas",
-            "Schools - A point dataset of schools geocoded to a street dataset of the district",
-            "Students - A point dataset of students geocoded to a street dataset of the district"
+            "**Study Areas** - A polygon dataset of the district showing planning areas coded by school attendance areas",
+            "**Schools** - A point dataset of schools geocoded to a street dataset of the district",
+            "**Students** - A point dataset of students geocoded to a street dataset of the district"
           ] }
         ]
       ],
@@ -3314,9 +3314,9 @@ window.SCHOOL_SITE_DOCS = [
         [
           { "type": "paragraph", "text": "Additionally, the following datasets are optional and not necessary to run the application, but can help you with other features in SchoolSite Pro:" },
           { "type": "ordered", "items": [
-            "Streets - A line dataset",
-            "Tract - A point or area dataset of planned residential development within the district",
-            "Assessor - A point feature of existing housing data within the district. This dataset is necessary only if you wish to run maturation projections or create student yield factors."
+            "**Streets** - A line dataset",
+            "**Tract** - A point or area dataset of planned residential development within the district",
+            "**Assessor** - A point feature of existing housing data within the district. This dataset is necessary only if you wish to run maturation projections or create student yield factors."
           ] }
         ]
       ],
@@ -3712,7 +3712,8 @@ window.SCHOOL_SITE_DOCS.push(...[
         'Report setup and export',
         [
           { type: 'paragraph', text: 'Select the grade level and review the historical student data used to calculate mobility values.' },
-          { type: 'paragraph', text: 'Export the mobility summary to Excel, including raw student counts and percentage values that help assess confidence in the calculation.' }
+          { type: 'paragraph', text: 'Export the mobility summary to Excel, including raw student counts and percentage values that help assess confidence in the calculation.' },
+          { type: 'image', src: 'assets/images/export_mobility_summary_output.png', alt: 'Mobility Summary export output', caption: 'Mobility Summary export output in Excel.' }
         ]
       ]
     ]
