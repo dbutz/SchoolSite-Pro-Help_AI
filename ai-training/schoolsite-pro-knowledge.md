@@ -16,7 +16,7 @@ Current release: 1.9.7 (September 16, 2026)
 
 SchoolSite Pro is the planning tool developed and used in-house by MGT staff and also empowers school planners with GIS experience to create student forecasts and attendance-area redistricting plans.
 
-It runs as an extension for Esri’s  ArcGIS Pro and helps planners compare planning scenarios with GIS data for analysis and decision-making.
+As an extension for Esri’s ArcGIS Pro, SchoolSite Pro allows users to compare their plans with the wealth of GIS data available to planners and perform powerful analysis.
 
 ### Get started
 
@@ -41,6 +41,7 @@ It runs as an extension for Esri’s  ArcGIS Pro and helps planners compare plan
 
 ### The Statistics Window
 
+- Statistics Window Introduction
 - Statistics Window Tabs
 
 ### Forecasts
@@ -100,7 +101,7 @@ Image: Data Setup validates the datasets used by SchoolSite Pro.
 
 ### Manage your data | SchoolSite Pro for ArcGIS Pro 3.3+
 
-The heart of SchoolSite Pro is your districtâ€™s data. After your data has been created, the SchoolSite Pro Data Setup tool can help ensure your dataâ€™s compatibility with the rest of the software.
+The heart of SchoolSite Pro is your district's data. After your data has been created, the SchoolSite Pro Data Setup tool can help ensure your dataâ€™s compatibility with the rest of the software.
 
 Use the pages below to build the source GIS datasets, then validate them before creating plans and forecasts.
 
@@ -279,9 +280,9 @@ Image: The selected tab shows the statistics for the current selection.
 
 ### Commit the Modification
 
-1. If the changes are acceptable, commit the change. In the Assign Tools group, click on Assign Studyareas. The statistics window and map will update.
+1. If the changes are acceptable, commit the change. In the Assign Tools group, click on Assign Studyareas. The statistics window and map will update. You can roll back your changes prior to permanently saving them by clicking on the Undo button in the Assign Tools group.
 2. If you are certain you want to make your changes permanent, click on Save Assignments in the Assign group.
-3. When finished, stop the edit session by clicking Stop from the Assign group. Please note: Once you choose to Save Assignments or Stop Assigning, you can no longer undo edits.
+3. When finished, stop the edit session by clicking Stop from the Assign group. **Please note: Once you choose to Save Assignments or Stop Assigning, you can no longer undo edits.**
 4. If necessary click on Show Statistics, the Current Residence Tab reflects the update.
 5. To review the original statistics when the plan was first created, click on the Original Residence tab.
 
@@ -343,7 +344,7 @@ Right-click the map that contains the Plan that you would like to copy and choos
 
 Image: Choose Copy on the plan map, then Paste in the Maps folder.
 
-A copy of your Plan will appear with the same name and the number ?1? at the end.
+A copy of your Plan will appear with the same name and the number '1' at the end.
 
 Image: The copied plan appears with the same name and a suffix of 1.
 
@@ -351,7 +352,7 @@ At this time, you can now rename your Plan by simply renaming the map as you wou
 
 Image: Rename the plan map in ArcGIS Pro to match your new scenario.
 
-SchoolSite Pro will understand that this map contains a plan and will update the Plan?s tables accordingly to update the Plan?s name.
+SchoolSite Pro will understand that this map contains a plan and will update the Plan's tables accordingly to update the Plan's name.
 
 ## Redistrict based on current resident students
 
@@ -381,11 +382,11 @@ To make this possible SchoolSite Pro uses a series of rules or assumptions to go
 
 Assumptions/Software Rules for Redistricting by Enrollment:
 
-1. What happens to a student enrolled at their resident school during a boundary change? It is assumed that any student living in an area of proposed attendance boundary change who is currently enrolled in their resident school will be assigned to the new school of residence.
-2. What happens to a student who is not enrolled in their school of residence during a boundary change? Any student living in an area of proposed attendance boundary change that is enrolled in a school other than their resident school will be assumed to continue to be enrolled at that other school. Students living in an area not affected by a proposed attendance boundary change will continue to attend their current school of enrollment, even if the school they are attending is involved in a boundary change. (i.e. students who are transferring into a school will be allowed to continue to transfer in).
-3. What happens to a student enrolled in a district-wide non-attendance boundary school? Students living in a study area who are enrolled in a school without an assigned attendance boundary (i.e. magnet, charter, academy, etc.) will assume to always be enrolled at that school regardless if their study area is reassigned.
-4. What happens to a student when a new school is opened? In the case of a school opening with a new attendance boundary, it is assumed that all students in the new proposed attendance boundary who are enrolled at their resident school will be reassigned to the new school. All students not enrolled in their resident school in this area will continue with their current school.
-5. What happens to a student when a school is closed? In the case of school closure, it is assumed that all students enrolled in the school being closed will be reassigned back to their school of residence. [Note: Students who are attending the closed school and have been previously excluded from the redistricting process (i.e. students residing outside of the District, special education students etc.) will be left for the District to decide how to reassign these students to other sites.]
+1. **What happens to a student enrolled at their resident school during a boundary change?** It is assumed that any student living in an area of proposed attendance boundary change who is currently enrolled in their resident school will be assigned to the new school of residence.
+2. **What happens to a student who is not enrolled in their school of residence during a boundary change? **Any student living in an area of proposed attendance boundary change that is enrolled in a school other than their resident school will be assumed to continue to be enrolled at that other school. Students living in an area not affected by a proposed attendance boundary change will continue to attend their current school of enrollment, even if the school they are attending is involved in a boundary change. (i.e. students who are transferring into a school will be allowed to continue to transfer in).
+3. **What happens to a student enrolled in a district-wide non-attendance boundary school?** Students living in a study area who are enrolled in a school without an assigned attendance boundary (i.e. magnet, charter, academy, etc.) will assume to always be enrolled at that school regardless if their study area is reassigned.
+4. **What happens to a student when a new school is opened?** In the case of a school opening with a new attendance boundary, it is assumed that all students in the new proposed attendance boundary who are enrolled at their resident school will be reassigned to the new school. All students not enrolled in their resident school in this area will continue with their current school.
+5. **What happens to a student when a school is closed?** In the case of school closure, it is assumed that all students enrolled in the school being closed will be reassigned back to their school of residence. [Note: Students who are attending the closed school and have been previously excluded from the redistricting process (i.e. students residing outside of the District, special education students etc.) will be left for the District to decide how to reassign these students to other sites.]
 
 The end result is a plan that will allow users to see not only the resident student population totals of each attendance area following redistricting but also the estimated enrollment totals of each school as well. An additional tab is included to show the estimated enrollment totals at each school and can be used to help in short term planning.
 
@@ -1206,7 +1207,7 @@ Each dataset has specific attribute requirements, and additional fields may be a
 
 - The spelling of each required field must match the field names shown in the help documentation.
 - Any null values in required fields should be converted to an empty string before using the data.
-- SchoolSite Pro does not support special characters such as periods, commas, ampersands, dashes, or slashes in required fields.
+- SchoolSite Pro does not support special characters such as periods, commas, ampersands, dashes, or slashes in required fields etc(i.e. .,&-/`~) in any field in any dataset.
 - If a field is defined as a short integer, it cannot contain values longer than four digits. Use a long integer if you need larger values.
 
 ### Related topics
@@ -1823,9 +1824,9 @@ Image: Start an editing session from the Assign ribbon.
 
 Image: Choose Start to begin assigning study areas.
 
-Use Caution when Assigning: When assigning study areas, please refrain from using any other editing tools and only use the Undo button provided in this ribbon. Otherwise, you could experience unexpected results when moving study areas between attendance boundaries. Once you click “Stop Assigning” you can then use all the editing tools and the normal undo button without affecting your plan.
+**Use Caution when Assigning:** When assigning study areas, please refrain from using any other editing tools and only use the Undo button provided in this ribbon. Otherwise, you could experience unexpected results when moving study areas between attendance boundaries. Once you click “Stop Assigning” you can then use all the editing tools and the normal undo button without affecting your plan.
 
-2. To reassign study areas from existing schools, from the assign ribbon, click on the drop-down arrow under “Assign study areas to:” and select the school to which you wish to assign the study area(s).
+**2. To reassign study areas from existing schools, from the assign ribbon, click on the drop-down arrow under “Assign study areas to:” and select the school to which you wish to assign the study area(s).**
 
 Image: Choose the target school for reassignment.
 
@@ -1835,7 +1836,7 @@ Contents Pane > Right click on Boundary Plan > Label
 
 Image: Turn on labels so school names are visible on the map.
 
-4. Once a school has been chosen, choose a select feature tool from the toolbar. Listed in order, the available selection tools are:
+**4. Once a school has been chosen, choose a select feature tool from the toolbar. Listed in order, the available selection tools are:**
 
 - Select Features
 - Select by Rectangle
@@ -1850,6 +1851,8 @@ Modifying Boundaries
 6. To see how the reassignment of the selected study areas would affect that school, click on the Proposed Statistics Tab.
 
 7. To view only the statistics for the selected study areas, click on the Selected Residence Tab.
+
+See topic “Statistics Window” for more information.
 
 Commit the Modification
 
@@ -2382,19 +2385,19 @@ The core GIS and student datasets needed by SchoolSite Pro.
 
 ### Map Datasets for Use with SchoolSite Pro
 
-In order to use the SchoolSite Pro Extensions, you must have the following required map datasets:
+In order to use the SchoolSite Pro Extensions, you must have the following **required** map datasets:
 
-1. Study Areas - A polygon dataset of the district showing planning areas coded by school attendance areas
-2. Schools - A point dataset of schools geocoded to a street dataset of the district
-3. Students - A point dataset of students geocoded to a street dataset of the district
+1. **Study Areas** - A polygon dataset of the district showing planning areas coded by school attendance areas
+2. **Schools** - A point dataset of schools geocoded to a street dataset of the district
+3. **Students** - A point dataset of students geocoded to a street dataset of the district
 
 ### Optional Datasets
 
 Additionally, the following datasets are optional and not necessary to run the application, but can help you with other features in SchoolSite Pro:
 
-1. Streets - A line dataset
-2. Tract - A point or area dataset of planned residential development within the district
-3. Assessor - A point feature of existing housing data within the district. This dataset is necessary only if you wish to run maturation projections or create student yield factors.
+1. **Streets** - A line dataset
+2. **Tract** - A point or area dataset of planned residential development within the district
+3. **Assessor** - A point feature of existing housing data within the district. This dataset is necessary only if you wish to run maturation projections or create student yield factors.
 
 ### Data Formats
 
@@ -2708,6 +2711,8 @@ Image: Mobility Summary report view in SchoolSite Pro.
 Select the grade level and review the historical student data used to calculate mobility values.
 
 Export the mobility summary to Excel, including raw student counts and percentage values that help assess confidence in the calculation.
+
+Image: Mobility Summary export output in Excel.
 
 ## Development Summary Report
 
@@ -3431,10 +3436,22 @@ FY26 Q4 Update 10 - Patch.
 
 FY26 Q4 Update 9.
 
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
+**New Features:**
+- New: Utilization Report. This is now an automated report and used to setup boundary comparison web apps during a rezoning project
+- Export SYF reports during Data Setup
+- Added CAPACITY field to the automated attendance matrix Excel file
+- Additional residential forecasting charts available with an optional checkbox during the Report Setup
+- Additional student types that can be added to the automated attendance matrix are only available if they exist in the student data that has been imported into SchoolSite (just like how Create Plan works)
+- This change also resulted in much improved performance time when creating Address Directory. It is now roughly twice as fast.
+- Project Summary Report updated based on feedback from Cameron and the standardization team (example report attached for reference on changes)
+- Reassigning study areas by (closest school, capacity, max limit ) now allows you to choose one or more schools to exclude from this process so you can reassign most schools but keep some locked as they are
+**Minor bugs and UI improvements:**
+- SYF calculations are only is available when importing Assessor data with polygon geometry
+- Added a warning when calculating a forecast if Projected Housing Units are detected with no corresponding SYF values
+- Fixed an issue with the travel modes from Esri that make creating walk zones broken
+- Tapestry Segmentation report was deprecated, new version has been added
+- While assigning study areas in a plan based on a forecast, you can no longer change the forecast year in the stats window.
+- Doing so would require edits to tables and when those edits were saved it would lock in study area assignments and remove the ability to use the Undo button
 
 ### Version 1.9.5 (July 2026)
 
@@ -3450,9 +3467,24 @@ FY26 Q4 Update 8.
 
 FY26 Q3 Update 7. Introducing new reporting features for residential forecasts.
 
-- [object Object]
-- [object Object]
-- [object Object]
+**New Features:**
+- **SYF Automation**
+  - Use parcel data to automatically generate student yield factors to apply to new housing units to estimate how many students will be generated from those new housing developments in the future
+- The statistics window UI updates such as:
+  - Sorting the table by any column
+  - Scale/zoom in to see larger font size for improved readability
+- Additional data validation to check consistency between student types across historical student data
+- Lock a plan to prevent further study area re-assignments (Similar to locking in a forecast once delivered to the client)
+- School layer in a plan's map now has Map Tips turned on by default
+- The study area numbering tool has been recreated from ArcMap
+- Forecast can now be summarized on any available field in the study area data instead of just by attendance zone, district-wide, or sub-District (which uses the DISTRICT field)
+  - This means you can select a CITY, ZIP, or any other field present in the Study Area data to use to group study areas in a report
+- **Plans with Enrollment now use ALL student types**
+  - The Estimated Enrollment tab has always shown all students who are enrolled in a school who meet the grade criteria with no regard for the value in the STUTYPE field (GE, SE, CH, etc..)
+  - When making a ‘Plan with Enrollment’, it does not ask you which student types you want to use like it does with a residence-based plan. Therefore, it was unclear that the students in the Current tab were only ‘GE’ students.
+  - **This is now DIFFERENT:** Moving forward, the ‘Current’ tab will work similarly to the ‘Estimated Enrollment’ tab in that it will show ALL students who RESIDE in the school’s boundary and meet the grade criteria specified with no regard for the value in the STUTYPE field.
+  - This will make the methodology in ‘Plans with Enrollment’ consistent and show ALL resident students in one tab and ALL enrolled students in the other tab
+Additional misc. minor bug fixes and UI improvements
 
 ### Version 1.9.3 (January 2026)
 
@@ -3487,48 +3519,82 @@ FY26 Q1 Update 4.
 
 FY26 Q1 Update 3. Introducing Sync Plans and more.
 
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
+**New Features**
+- New option to sync changes between multiple plans:
+  - This does not work with Plans based on enrollment; only residence and forecasted students.
+  - Checking on plans in the ‘Plans to Sync’ menu will push the following changes to those plans:
+    - Boundary reassignments; Reassignment of study areas from their current school to a different school.
+    - Any changes using the Reassign Study Area button (allows you to reassign all study areas by closest school, capacity, max limit, etc…)
+    - Add new/existing school or update capacity
+- You can now summarize the statistics window by ‘Student Attribute’ in a plan based on forecasted data
+- You can now use keyboard modifiers when selecting study areas during reassignment, just like the out-of-the-box selection tools in Pro
+  - Holding SHIFT when selecting will ADD more study areas to the current selection
+  - Holding CTRL when selecting will REMOVE study areas from the current selection
+**Minor bugs and UI improvements**
+- Fixed a bug that would clear out any feature selections unexpectedly, making it difficult to see selected records
+- Updated Statistics Window title to include the plan's name, so the user can easily tell which plan those statistics relate to when multiple maps are open, sometimes plans can be open side by side when syncing and now the stats dock pane shows the plan's name to reduce confusion.
+- **IMPORTANT!** The new enrollment forecast methodology **(Rate of Change)** has been updated slightly
+  - The change in this version is that the K class calculation is now done the same as the PK class using the ‘Direct Rate of Change’ formula. See our full documentation for more details.
 
 ### Version 1.8.9 (November 2025)
 
 FY26 Q1 Update 2. Introducing Rate of Change enrollment forecasts and the study-area ID tool for forecasts.
 
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
+**Introducing ‘Rate of Change’ enrollment forecast & study area ID tool for forecasts**
+- New method for creating enrollment forecasts: Rate of Change
+  - This adds a new methodology called 'Rate of Change' in addition to the existing 'Transfer Pattern' method
+  - User can select from a menu which method to use
+  - Rate of Change method only applies to schools with a boundary. Schools with no boundary (magnet, district wide, etc.) will still use the 'Transfer Pattern' method
+- Study area ID tool for forecasts: Click on a study area and see a popup windows with all the factors applied to that polygon and the forecast results generated in a single click
+- Plan overlay feature now allows you to add more than one overlay and only removes them when you choose the first option in the list "Do not overlay another plan", otherwise the user must remove them individually.
+- New tooltips and explanation labels for Data Enrichment and Enrollment Forecast tools
+**New tooltips, help information, and UI updates**
+- Fixed bugs and made improvements to copying and renaming plans and forecasts
+- Data Enrichment: updated tooltips, screenshots, and UI labels to help explain what will be included in the output based on user input selections
+- Various improvements to UI elements across the application for better consistency
+- New Help button on SchoolSite 'Share' ribbon to direct users to our web help documents
 
 ### Version 1.8.8 (October 2025)
 
 FY26 Q1 Update 1. Introducing the Automated Attendance Matrix feature.
 
-- [object Object]
-- [object Object]
+**Introducing Automated Attendance Matrix feature**
+- Fixed error when entering a lowercase grade range like ‘k-6’
+- Added an option to include ‘SE’ students when making an automated attendance matrix
+- Changed the data type requirements to enforce only ‘short’ int numerical values instead of ‘short’ or ‘long’ integers to avoid any really large numbers in the input that might be attempted to get written to another table that only accepts ‘short’
+- Changed a data validation from error to warning
+  - If a school serves a grade, and no students are enrolled in that grade, it now reports a warning instead of error
+  - Added a warning to identify overlaps in school coverage such as a study area assigned a K-6 elementary and a 6-8 middle that could indicate an option area for grade 6 that might go otherwise unnoticed.
 
 ### Version 1.8.7 (October 2025)
 
 FY26 Q1 release. Introducing the Automated Attendance Matrix feature.
 
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
+**Introducing Automated Attendance Matrix feature**
+- Create an attendance matrix using GE "General Education" students by defining the grade ranges for each of the grade levels present in the study area data.
+**Data enrichment tool upgrade**
+- This tool will now enrich both current study areas as well as now plans so you can attach forecasted student counts to proposed attendance boundaries from plans you create.
+**Misc changes**
+- Imported historical student data is now enriched (just like current year student data already was) with three additional fields of data: school name of residence, school code of residence, and school name of enrollment
+- New data validation rule that will check to determine grades served district wide (that make up the attendance boundaries) and make sure all students are in grades served by those schools
+- Minor UI updates, tooltips, etc.
 
 ### Version 1.8.6 (Earlier release)
 
 Introducing Program Re-assignment feature.
 
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
+**Introducing Program Re-assignment feature**
+- Import programs (special ed, music, dual language, etc. Each program has a number of reserved classroom seats)
+- Add new programs/delete programs
+- Reassign programs from one school to another
+- Stats window now shows a modified capacity column that reduces the overall capacity based on the number of seats of programs assigned to that school
+**New data validation rules**
+- Detect if a study area is assigned to schools that create gaps in grade range coverage
+- Detect if a student is enrolled in a school that does not serve their grade (8th grader enrolled in a 9-12 school)
+- Detect if a school serves a grade that has no students enrolled (school serves K-6 but only has K-5 enrolled)
+**Misc changes**
+- Several improvments and bugs addressed for plans with enrollment
+- Minor UI updates, tooltips, etc.
 
 ### Version 1.8.5 (Earlier release)
 
