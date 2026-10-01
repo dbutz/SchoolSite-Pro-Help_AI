@@ -527,18 +527,18 @@ Statistics Types
 
 This section allows you to report the number of students in each of the selected schools based on various attributes. The Grade Distribution option (default option) reports the number of students in each grade selected. Statistic types only display in the resident tabs of the statistics window. The Estimated Enrollment tab only displays individual grades and grade ranges.
 
-- Grade Distribution: This will allow you to select the individual grades and grade ranges (in the Select Grades section) to display in the statistics window.
-- Capacity: This is taken from the “CAPACITY” field in your Schools dataset. It displays the current capacity for each school.
-- % Capacity: This reflects the percentage of capacity compared to summarized grade ranges.
-- Student Attribute: By default, the grade field is always summarized, but you can summarize any field that you have in your student data such as ethnicity, school of enrollment, gender, ESL, etc. Click on Other Student Attribute and select a field from the student data you want to summarize from the drop-down menu.
+- **Grade Distribution**: This will allow you to select the individual grades and grade ranges (in the Select Grades section) to display in the statistics window.
+- **Capacity**: This is taken from the “CAPACITY” field in your Schools dataset. It displays the current capacity for each school.
+- **% Capacity**: This reflects the percentage of capacity compared to summarized grade ranges.
+- **Student Attribute**: By default, the grade field is always summarized, but you can summarize any field that you have in your student data such as ethnicity, school of enrollment, gender, ESL, etc. Click on Other Student Attribute and select a field from the student data you want to summarize from the drop-down menu.
 
-Caution: You should not summarize a field that has a lot of unique values, such as student ID. Currently, the limit to the maximum number of unique values allowed in a field to summarize is 150. If you have a fairly large student data set it will take a very long time to summarize and the resulting report will not produce much usable information. Fields such as ethnic and special education will give you valuable information and will take minimal time to summarize.
+Caution: You should not summarize a field that has a lot of unique values, such as student ID. **Currently, the limit to the maximum number of unique values allowed in a field to summarize is 150**. If you have a fairly large student data set it will take a very long time to summarize and the resulting report will not produce much usable information. Fields such as ethnic and special education will give you valuable information and will take minimal time to summarize.
 
 You can deselect any additional attributes you may have selected by clicking on the grade distribution button again.
 
 Please note: This section will be grayed out if the plan is based on forecasted student data.
 
-Show grades / Show ranges / Display percentage: These three options give you the option of how you want to summarize the “other student attributes”. The statistics window will show the number of students by grade by the selected attribute or totaled by grade range or as a percent of that school’s total population.
+**Show grades / Show ranges / Display percentage**: These three options give you the option of how you want to summarize the “other student attributes”. The statistics window will show the number of students by grade by the selected attribute or totaled by grade range or as a percent of that school’s total population.
 
 Please note: This section will be unavailable if the plan is based upon forecasted student data.
 
@@ -550,7 +550,7 @@ If you created your plan based on forecast data, you can select the pull-down me
 
 Image: Use the forecast year drop-down to review future-year plan results.
 
-Please note: If your Statistics Window has no grade ranges specified, then the Projection Summary Report will display either PK-12 or K-12 by default, depending on whether or not you chose to include PK students during plan creation.
+**Please note**: If your Statistics Window has no grade ranges specified, then the Projection Summary Report will display either PK-12 or K-12 by default, depending on whether or not you chose to include PK students during plan creation.
 
 ## Statistics Window Tabs
 
@@ -655,9 +655,9 @@ Image: The forecast tour introduces setup, reporting, and factor editing.
 
 The following is a brief tour of the basics of Forecasts in SchoolSite Pro. You can install sample data from Davis Demographics in order to follow along.
 
-To view forecast reports, modify factors, refresh forecast, and export forecasts, choose the green Forecasting ribbon.
-
 ### Forecast Reports
+
+To view forecast reports, modify factors, refresh forecast, and export forecasts, choose the green Forecasting ribbon.
 
 Begin by creating a district wide report:
 
@@ -691,9 +691,11 @@ There are two ways to edit your K Factors:
 
 In the table dockpane, right click on the YEAR1 column name and choose Calculate Field to change the value of the first year of forecasts for all study areas district wide. You can also click on the Calculate button at the top of the table to select the field you would like to change.
 
-Type in the value 1.05 in the box next to YEAR1 and click the Apply button. The values for all study areas in the column will change as illustrated. This factor applies a multiplier of 1.05 (a 5% increase) to the Kindergarten class for the first year of projections for all study areas.
+Type in the value 1.05 in the box next to YEAR1 and click the Apply button. The values for all study areas in the column will change as illustrated. This factor applies a multiplier of 1.05 (a 5% increase) to the Kindergarten class for the first year of projections for all study areas selected.
 
 Image: Updated K-factors show the effect of increasing the Kindergarten cohort in year one of the projection.
+
+**Method 2: Edit by selecting individual cells**
 
 Double click on the cell you would like to change, and press enter. The Refresh Forecast button will appear in the Forecasting ribbon to update the map.
 
@@ -754,21 +756,43 @@ To modify factors such as birth rates, mobility, student yield, and housing assu
 
 ### Optional tract and assessor data
 
-Tract data describes the location and phasing for planned residential development within the District. Including tract data allows your forecast to account for future housing development and generate development summary or project summary reports.
+Tract data describes the location and phasing for planned residential development within the District. Including tract data into your forecast adds housing development information to your forecast. It will allow you to generate a development summary report for your District, or a project summary report. In combination with student yield factors, it allows your forecast to consider new housing built in the future.
 
-If you imported tract data in Data Setup, you can choose to use it in your forecast by checking Use Tract Data and selecting which tract dataset to include.
+If you imported tract data in Data Setup, you can choose to use tract data in your forecast. Once you click the check box next to “Use Tract Data”, you will then select which tract data you’d like to use in your forcast.
 
-Assessor data contains parcel information that has been geocoded to a street network. Including assessor data allows maturation and build-out information to be added to the forecast. This information is used in projected housing units and student yield calculations.
+**Enter Assessor Data (Optional)**
 
-The housing types in the assessor file should match the housing types defined in the tract dataset. Once all fields are properly filled in, click Finish to create the forecast.
+Assessor data contains parcel information that has been geocoded to a street network.
+
+Including assessor data into your forecast allows for maturation (build out) information to be added to your forecast. It can be used to determine student yield factors by housing type, and is also used in estimating the number of existing dwelling units for maturation projections. In combination with tract data, assessor data allows your forecast to consider new housing built in the future.
+
+This information is filled in Year 0 in the modify variables/projected housing units in the forecast properties dialog window. This step is optional, as this data is only used if you intend to generate or develop maturation forecasts. The housing types that you have specified in the assessor file (Type 1, 2, 3, and 4) should match the new housing types defined in the tract dataset.
+
+Checkmark the box, next to “Use assessor data”. The same housing types found in the tract dataset should also be in the assessor file (This may require you to add additional fields and pre-process your assessor attribute table).
+
+Once all the fields are properly filled in, click on the Finish button to create the forecast. The forecast will take a few minutes to create.
+
+Please Note: You can decrease the time needed to create forecasts by including only the necessary fields in the study area, student, school, tract and assessor datasets. The time to create a forecast also depends on the number of students in the District.
+
+Once the forecast has completed, it will be added to the table of contents as a map and displayed in light blue. To modify factors (i.e. birth factors, mobility factors, student yield factors etc), click on the Modify Factors in the Forecasting ribbon.
+
+Image: Forecasting ribbon option in SchoolSite Pro.
 
 ### Copy a forecast
 
-You can also create a new forecast by copying an existing forecast. This is useful when you want to make initial base changes that should apply to all later variations.
+You can also create a new Forecast by copying an existing Forecast. This is useful if you want to make some initial basic changes to the Forecast that will apply to all others, and then create variations on top of those changes.
 
-From the Catalog pane, open Maps, find the map that contains the forecast, right-click it, choose Copy, then right-click the Maps folder and choose Paste. A copy of the forecast will appear with the same name and a number appended.
+Copying a Forecast is just like copying a map in ArcGIS Pro. From the Catalog pane, open the Maps section and find the map that contains your Forecast.
 
-You can then rename the forecast map as needed. SchoolSite Pro will update the forecast tables and name references automatically.
+If you are unsure which maps have a Forecast, click the Open button from the SchoolSite ribbon to get a specific list of SchoolSite Plans and Forecasts.
+
+Right-click the map that contains the Forecast that you would like to copy and choose Copy. Then, right-click on the Maps folder and click Paste’.
+
+A copy of your Forecast will appear with the same name and the number ‘1’ at the end.
+
+At this time, you can now rename your Forecast by simply renaming the map as you would any other map in ArcGIS Pro.
+
+SchoolSite Pro will understand that this map contains a Forecast and will update tables accordingly to update the Forecast’s name.
 
 ## Modify forecast factors
 
@@ -825,11 +849,11 @@ You can also choose to display maturation and/or display historical student data
 
 The first option What do you want to display? has three choices: By Study Area, By Existing Attendance Area, and By District Summaries. Depending on which selection you make, additional choices on the setup form will appear.
 
-“By Study Area” will display the forecasts for each study area you have chosen to display. You have three options, as shown below. They are: study areas you currently have selected on the map, a single study area which you choose from the drop down menu, or all study areas. The choice Currently Selected on the Map is only available (i.e. not grayed out), if you have selected study areas on your map.
+**“By Study Area”** will display the forecasts for each study area you have chosen to display. You have three options, as shown below. They are: study areas you currently have selected on the map, a single study area which you choose from the drop down menu, or all study areas. The choice Currently Selected on the Map is only available (i.e. not grayed out), if you have selected study areas on your map.
 
-“By Existing Attendance Areas” will display the forecasts for the chosen attendance area(s) for whatever grade level you choose. Attendance area forecasts are, in essence, a summarization of all the individual study areas forecasts making up the attendance area. After choosing the school type, choose either a single attendance area (which you select from the drop down menu), or all attendance areas (all of that school type). The third option is to display all schools by type (elementary, middle or high) that are contained within a selected subdistrict. A subdistrict refers to the district field within the study area dataset. Many times there are values in the “district” field that indicate additional geographic areas such as board trustee areas, city boundaries etc. If you have coded your study areas with unique subdistrict values, you may select and display attendance area forecasts that fall within the selected subdistrict.
+**“By Existing Attendance Areas”** will display the forecasts for the chosen attendance area(s) for whatever grade level you choose. Attendance area forecasts are, in essence, a summarization of all the individual study areas forecasts making up the attendance area. After choosing the school type, choose either a single attendance area (which you select from the drop down menu), or all attendance areas (all of that school type). The third option is to display all schools by type (elementary, middle or high) that are contained within a selected subdistrict. A subdistrict refers to the district field within the study area dataset. Many times there are values in the “district” field that indicate additional geographic areas such as board trustee areas, city boundaries etc. If you have coded your study areas with unique subdistrict values, you may select and display attendance area forecasts that fall within the selected subdistrict.
 
-“By District Summary” will summarize all study areas and display them as a district wide report or you can choose a subdistrict.
+**“By District Summary”** will summarize all study areas and display them as a district wide report or you can choose a subdistrict.
 
 ## Include historical student data in your report
 
@@ -865,9 +889,9 @@ Estimate future school enrollment for short-term staffing and budget planning.
 
 SchoolSite Enrollment Forecast is a way to ensure your district has the appropriate staff to fulfill future classroom requirements.
 
-SchoolSite Enrollment Forecasts use current resident and enrollment information, along with historic student mobility, to calculate an estimated enrollment for each school. This method helps evaluate the current state of facilities and future staffing needs.
+SchoolSite Enrollment Forecasts utilize current resident and enrollment information (non-resident student who are enrolled in the District), as well as historic student mobility to calculate an estimated enrollment for each school. This method of strategic and planned staffing can help to evaluate the current state of facilities, as well as future needs.
 
-Historical students are selected based on the same criteria used to generate the residential forecast. If your residential forecast included special education or independent study students, those student types are included when calculating transfers into and out of a school’s attendance zone.
+Historical students (both resident and non-resident) are selected based on the same criteria used to generate the residential forecast. For example, if your residential forecast included special education (SE) and independant study (IS) students then SchoolSite Pro will select those student types in addition to general educations (GE) when determining the students who are transferring into and out of a school’s attendance zone.
 
 ### Two-year enrollment forecasts
 
@@ -879,13 +903,11 @@ The model uses current resident and enrollment information as well as recent tra
 
 Calculating an enrollment forecast for schools with attendance boundaries is different from calculating it for schools without attendance boundaries. For schools with attendance boundaries, the two-year forecasted enrollment is calculated by combining future resident population and historic transfer patterns for each school.
 
-Similar to mobility factors in residence forecasts, a cohort is derived by averaging four years of past transfer patterns. The cohort is calculated for transfers into and out of each school for each grade between 1 and 12 that the school serves. The estimate is then applied to the current transfer-by-grade pattern to project future enrollment for each grade.
+Similar to mobility factors in residence forecasts, a cohort is derived by averaging four years of past transfer patterns. The cohort is calculated for transfers into and out of each school for each grade between 1 and 12 that the school serves. This cohort is then applied to the current transfer by grade of the base year students to come up with estimated in and estimated out transfers for the future years. To estimate the transfers in and transfers out for the lowest grade served at each school, an average is taken of the last four years of transfers. Finally, forecasted enrollment by grade for each school is calculated by taking the forecasted resident population, and adding the estimated transfers in and transfers out.
 
 ### Methodology for schools without attendance boundaries
 
 To calculate an enrollment forecast for schools without attendance boundaries, a different method is used. Transfers in and transfers out for the lowest grade served at each school are estimated by taking an average of the last four years of transfers. Each subsequent grade is calculated using the non-weighted cohort survival method and applied to the current year’s enrollment.
-
-This approach provides a practical estimate of future staffing loads where attendance boundaries do not necessarily define the student population in the same way as a traditional neighborhood school.
 
 ## Reports
 
@@ -1920,10 +1942,10 @@ Image: Use Reassign Study Areas to rebuild school assignments by planning rule.
 
 There are multiple ways to reassign schools to different study areas. Reassign Schools helps you choose the best method for your district.
 
-1. By current boundaries – Choose this method if you want to go back to the current boundaries that the study areas are assigned. This option will also revert any changes made to school’s capacities within the plan and set them back to the default of what the CAPACITY field contained in the schools feature class.
-2. By closest school – Choosing this method will assign the study areas to the closest school and create all new attendance areas.
-3. By school capacity - If the capacity field is filled in for each school in the school layer, a plan can be reassigned based on these limits. Similar to the maximum student assignment option described above, the study areas that exceed the limit per school will be shaded in grey. Be sure to set the grade range appropriate to the type of plan being created (i.e. High school plan will most likely have a specified grade range of 9-12).
-4. By maximum students - Choose this method if you want to specify the maximum number of students by grade range by entering the maximum number of students allowed at the grade range specified. The study areas that exceed the maximum limit will be shaded in grey. This will show where a new school might be needed.
+1. **By current boundaries** – Choose this method if you want to go back to the current boundaries that the study areas are assigned. This option will also revert any changes made to school’s capacities within the plan and set them back to the default of what the CAPACITY field contained in the schools feature class.
+2. **By closest school** – Choosing this method will assign the study areas to the closest school and create all new attendance areas.
+3. **By school capacity** – If the capacity field is filled in for each school in the school layer, a plan can be reassigned based on these limits. Similar to the maximum student assignment option described above, the study areas that exceed the limit per school will be shaded in grey. Be sure to set the grade range appropriate to the type of plan being created (i.e. High school plan will most likely have a specified grade range of 9-12).
+4. **By maximum students** – Choose this method if you want to specify the maximum number of students by grade range by entering the maximum number of students allowed at the grade range specified. The study areas that exceed the maximum limit will be shaded in grey. This will show where a new school might be needed.
 
 Image: Reassign by current boundaries to restore the existing assignment pattern.
 
@@ -2002,8 +2024,6 @@ A pop-up will display with the location of the report when it finishes generatin
 
 Use current housing, planned development, potential development and maturation Student Yield Factors for long-range projections.
 
-Image: The maturation methodology combines current housing, planned development, and student-yield assumptions.
-
 ### Include maturation data in your forecast
 
 Including maturation data into your forecast can lead to more accurate predictions for your District. Check out the following pages for more information about what maturation data is, how it can be calculated into your report, and how to include maturation data into your report.
@@ -2017,8 +2037,6 @@ Including maturation data into your forecast can lead to more accurate predictio
 ## Maturation Concept
 
 Understand how housing occupancy and student yields mature over time.
-
-Image: A maturation master plan identifies future school sites required at build-out.
 
 ### Maturation concept
 
@@ -2135,7 +2153,7 @@ Calculating Student Yield Factors
 
 Entering Maturation Student Yield Factors
 
-1. Click on the drop down menu for Modify factor in the forcasting ribbon and choose Maturation.
+1. Once you have calculated the factors, you will need to enter them in the Student Projection Properties table. Open the projection to be modified. Then, from the SchoolSite Projection Toolbar, click the projection properties button , Residential Projections > Modify Variables.
 2. Under “Specify variable to modify”, click the dropdown menu to Maturation Yields. Be sure to select Maturation Yields rather than student yields.
 3. Choose the house type to apply maturation yield factors. Remember, Types 1 through 4 correspond to the types as defined in your tract and assessor datasets.
 4. Next, specify study areas to display by choosing one of three choices:
