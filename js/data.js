@@ -2,7 +2,7 @@
   "version": "1.9.7",
   "releaseDate": "September 16, 2026",
   "downloadUrl": "https://github.com/dbutz/SchoolSite-Pro-Docs/releases/download/1.9.7/SchoolSite.Pro.1.9.7.zip",
-  "githubUrl": "https://github.com/dbutz/SchoolSite-Pro-Docs",
+  "githubUrl": "https://github.com/dbutz/SchoolSite-Pro-Help_AI",
   "productName": "SchoolSite Pro",
   "requirements": "ArcGIS Pro 3.3.0+"
 };

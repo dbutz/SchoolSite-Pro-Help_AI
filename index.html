@@ -89,6 +89,7 @@ const docs = window.SCHOOL_SITE_DOCS;
 const tools = window.SCHOOL_SITE_TOOLS;
 const sections = [...new Set(docs.map(x=>x.section))];
 let currentDoc = null;
+let homeTourTimer = null;
 
 // Apply release metadata to both the static shell and route-generated markup.
 function syncReleaseLabels() {
@@ -103,12 +104,21 @@ function syncReleaseLabels() {
 
 syncReleaseLabels();
 
+// Keeps navigation shareable through the URL and handles repeat clicks on the current route.
 function route(name, id){
-  if(name==='doc' && id){ location.hash='doc/'+id; }
-  else location.hash=name;
-  renderRoute();
+  const nextHash = name === 'doc' && id ? `#doc/${id}` : `#${name}`;
+  if (location.hash === nextHash) {
+    renderRoute();
+    return;
+  }
+  location.hash = nextHash;
 }
+// Renders the page selected by the URL and synchronizes navigation state.
 function renderRoute(){
+  if (homeTourTimer !== null) {
+    clearInterval(homeTourTimer);
+    homeTourTimer = null;
+  }
   const parts=location.hash.replace(/^#/,'').split('/');
   const page=parts[0]||'home', id=parts[1];
   document.querySelectorAll('#desktopNav button').forEach(b=>b.classList.toggle('active',b.dataset.route===page || (page==='doc'&&b.dataset.route==='docs')));
@@ -121,6 +131,7 @@ function renderRoute(){
   syncReleaseLabels();
   window.scrollTo(0,0);
 }
+// Builds the sidebar for the current page and marks its active destination.
 function renderSidebar(page,id){
   const s=document.getElementById('sidebar');
   if(page==='docs'||page==='doc'){
@@ -183,6 +194,7 @@ function renderSidebar(page,id){
   }
 }
 
+// Builds the overview page and initializes its interactive product tour.
 function renderHome() {
   const overviewCards = [
     {
@@ -750,13 +762,11 @@ function renderHome() {
 
   let currentSlide = 0;
 
-  let tourTimer;
-
-
   // =========================================
   // SHOW SLIDE
   // =========================================
 
+  // Keeps the current tour slide and its navigation indicators in sync.
   function showTourSlide(index) {
 
     if (!slides.length) {
@@ -793,11 +803,12 @@ function renderHome() {
   // RESTART AUTO SLIDE
   // =========================================
 
+  // Resumes automatic tour playback after a slide change or pointer exit.
   function restartTourTimer() {
 
-    clearInterval(tourTimer);
+    clearInterval(homeTourTimer);
 
-    tourTimer = setInterval(() => {
+    homeTourTimer = setInterval(() => {
 
       showTourSlide(currentSlide + 1);
 
@@ -877,7 +888,7 @@ function renderHome() {
 
     tour.addEventListener(
       'mouseenter',
-      () => clearInterval(tourTimer)
+      () => clearInterval(homeTourTimer)
     );
 
     tour.addEventListener(
@@ -889,6 +900,7 @@ function renderHome() {
 
 }
 
+// Creates the documentation search results view.
 function renderDocs(){
  document.getElementById('appMain').innerHTML=`
  <section class="page-head"><span class="eyebrow">DOCUMENTATION</span><h1>SchoolSite Pro documentation</h1><p>Search across the complete local guide. Select an article to open it without leaving this site.</p></section>
@@ -897,6 +909,7 @@ function renderDocs(){
  filterDocs('');
 }
 
+// Converts structured article content to searchable plain text.
 function articleContentText(content) {
   if (Array.isArray(content)) {
     return content.map(item => articleContentText(item)).join(' ');
@@ -934,10 +947,12 @@ function articleContentText(content) {
   return String(content || '');
 }
 
+// Detects legacy text blocks that should be displayed as lists.
 function looksLikeListText(text) {
   return /(?:^|\n)\s*(?:[-*•]|\d+\.)\s+/m.test(text);
 }
 
+// Splits legacy bullet or numbered text into individual list entries.
 function parseListText(text) {
   return text
     .split(/\n+/)
@@ -950,6 +965,7 @@ function parseListText(text) {
     .filter(Boolean);
 }
 
+// Normalizes strings and legacy content objects into a display label.
 function resolveTextValue(value) {
   if (value == null) return '';
   if (typeof value === 'string') return value.trim();
@@ -963,6 +979,7 @@ function resolveTextValue(value) {
   return String(value).trim();
 }
 
+// Escapes content while converting the supported inline emphasis markers.
 function formatInlineRichText(value) {
   const text = String(value ?? '');
 
@@ -990,6 +1007,7 @@ function formatInlineRichText(value) {
     .replace(/'([^']+)'/g, '‘$1’');
 }
 
+// Renders plain, linked, and nested items using the same list rules.
 function renderListItem(item, ordered) {
   if (typeof item === 'string') {
     return `<li>${formatInlineRichText(item.trim())}</li>`;
@@ -1014,6 +1032,7 @@ function renderListItem(item, ordered) {
   return `<li>${formatInlineRichText(safe || 'Item')}</li>`;
 }
 
+// Distinguishes short section labels from sentences in legacy article content.
 function isArticleHeadingText(text) {
   const value = (text || '').trim();
 
@@ -1028,6 +1047,7 @@ function isArticleHeadingText(text) {
   return !/^\s*[-*•]\s+/.test(value);
 }
 
+// Renders supported content blocks consistently across articles, tools, and notes.
 function renderStructuredBlock(block) {
   if (Array.isArray(block)) {
     return block.map(item => renderStructuredBlock(item)).join('');
@@ -1046,6 +1066,11 @@ function renderStructuredBlock(block) {
 
   if (!block || typeof block !== 'object') {
     return '';
+  }
+
+  if (block.href && (block.text || block.content)) {
+    const text = block.text || block.content;
+    return `<p><a href="${escapeHtml(block.href)}" onclick="${escapeHtml(block.onClick || '')}">${formatInlineRichText(text)}</a></p>`;
   }
 
   if (block.type === 'image') {
@@ -1091,6 +1116,7 @@ function renderStructuredBlock(block) {
   return '';
 }
 
+// Groups a heading and its rendered blocks into one article section.
 function renderArticleSection(heading, content) {
   const items = Array.isArray(content) ? content : [content];
   const sectionContent = items.map(item => renderStructuredBlock(item)).filter(Boolean).join('');
@@ -1102,6 +1128,7 @@ function renderArticleSection(heading, content) {
   return `<section>${heading ? `<h2>${escapeHtml(heading)}</h2>` : ''}${sectionContent}</section>`;
 }
 
+// Ranks document matches so titles and sections appear before body-only matches.
 function filterDocs(q){
  const query = q.trim().toLowerCase();
  const list = docs.map(d => {
@@ -1124,6 +1151,7 @@ function filterDocs(q){
  document.getElementById('docList').innerHTML = resultNote + (list.map(d=>`<button class="doc-row" onclick="route('doc','${d.id}')"><div><span class="doc-section">${d.section}</span><h3>${d.title}</h3><p>${d.summary}</p></div><span>→</span></button>`).join('') || '<div class="empty">No documentation matched your search.</div>');
 }
 
+// Connects the sidebar search field to the documentation results view.
 function searchDocuments(q) {
  if (!document.getElementById('docList')) {
    renderDocs();
@@ -1132,6 +1160,7 @@ function searchDocuments(q) {
  if (input) input.value = q;
  filterDocs(q);
 }
+// Renders the requested article, falling back to the home document for unknown IDs.
 function renderDoc(id){
  const d=docs.find(x=>x.id===id)||docs[0]; currentDoc=d;
  if (id === 'release-notes') {
@@ -1147,6 +1176,7 @@ function renderDoc(id){
  </article></section>`;
 }
 
+// Displays all release notes from the shared release data.
 function renderReleaseNotes() {
  document.getElementById('appMain').innerHTML=`
  <section class="article-wrap"><div class="breadcrumbs"><button onclick="route('docs')">Documentation</button><span>/</span><span>Start here</span></div>
@@ -1167,7 +1197,8 @@ function renderReleaseNotes() {
  </article></section>`;
 }
 
-function renderReleaseFeatures(release) {
+// Supports both legacy feature strings and structured release-note blocks.
+function renderReleaseFeatures(release, listClass = '') {
  const features = Array.isArray(release.features) ? release.features : [];
  if (!features.length) {
    return '<p class="release-note-empty">No additional feature notes were recorded for this release.</p>';
@@ -1178,7 +1209,8 @@ function renderReleaseFeatures(release) {
    return features.map(feature => renderStructuredBlock(feature)).join('');
  }
 
- return `<ul>${features.map(feature => `<li>${formatInlineRichText(feature)}</li>`).join('')}</ul>`;
+  const classAttribute = listClass ? ` class="${escapeHtml(listClass)}"` : '';
+  return `<ul${classAttribute}>${features.map(feature => `<li>${formatInlineRichText(feature)}</li>`).join('')}</ul>`;
 }
 
 /* Toolkit browsing and category filtering. */
@@ -1186,6 +1218,7 @@ function renderReleaseFeatures(release) {
 let activeToolCat = "All";
 let activeToolIndex = null;
 
+// Builds the available toolkit categories from the current tool data.
 function toolCategories() {
   return [
     "All",
@@ -1196,12 +1229,14 @@ function toolCategories() {
   ];
 }
 
+// Adds a result count to category labels so users can compare group sizes.
 function toolGroupLabel(category) {
   if (category === 'All') return `All tools (${tools.length})`;
   const count = tools.filter(tool => toolCategory(tool) === category).length;
   return `${category} (${count})`;
 }
 
+// Creates a clean toolkit view before the current filter is applied.
 function renderToolkit() {
   activeToolCat = "All";
   activeToolIndex = null;
@@ -1248,6 +1283,7 @@ function renderToolkit() {
    CHANGE CATEGORY
    --------------------------------------------------------- */
 
+// Applies a valid category choice and clears any narrower tool selection.
 function selectToolCategory(category) {
 
     activeToolCat = toolCategories().includes(category)
@@ -1265,6 +1301,7 @@ function selectToolCategory(category) {
     );
 }
 
+// Scopes toolkit results to a chosen tool and clears the search field.
 function selectTool(index) {
   const tool = tools[index];
   if (!tool) return;
@@ -1282,6 +1319,7 @@ function selectTool(index) {
    GET TOOL CATEGORY
    --------------------------------------------------------- */
 
+// Supplies a stable fallback category for tools without category metadata.
 function toolCategory(tool) {
 
     return tool &&
@@ -1296,6 +1334,7 @@ function toolCategory(tool) {
    FILTER TOOLS
    --------------------------------------------------------- */
 
+// Applies category and text filters, then renders matching tool cards.
 function filterTools(search = "") {
 
     const grid = document.getElementById("toolGrid");
@@ -1409,6 +1448,7 @@ function filterTools(search = "") {
 
 
 
+// Opens a focused modal with the selected tool's complete details.
 function openTool(i){
  const t=tools[i], m=document.createElement('div'); m.className='modal'; m.id='toolModal';
  const detailBlocks = [
@@ -1424,7 +1464,9 @@ function openTool(i){
  });
  document.body.appendChild(m);
 }
+// Presents installer details from the shared release configuration.
 function renderDownload(){
+ const currentReleaseNote = window.SCHOOL_SITE_RELEASE_NOTES.find(note => note.version === RELEASE.version);
  document.getElementById('appMain').innerHTML=`
  <section class="download-page">
    <div class="download-copy">
@@ -1438,14 +1480,7 @@ function renderDownload(){
      </p>
 
      <h2>What's new</h2>
-     <ul class="news">
-       <li>Utilization Report for boundary-comparison workflows.</li>
-       <li>SYF reports can be exported during Data Setup.</li>
-       <li>Automated Attendance Matrix includes CAPACITY.</li>
-       <li>Additional residential forecast charts.</li>
-       <li>Improved Address Directory performance.</li>
-       <li>Bulk reassignment can exclude selected schools.</li>
-     </ul>
+     ${currentReleaseNote ? renderReleaseFeatures(currentReleaseNote, 'news') : '<p>Release details are not available.</p>'}
 
      <h2>Installation</h2>
      <div class="steps install">
@@ -1516,6 +1551,7 @@ function renderDownload(){
    </aside>
  </section>`;
 }
+// Returns keyboard focus to the documentation sidebar search field.
 function focusSearch() {
   const input = document.getElementById('headerSearch');
 
@@ -1526,6 +1562,7 @@ function focusSearch() {
 }
 
 
+// Opens the global search palette and focuses its input for immediate typing.
 function openSearchOverlay() {
   const overlay = document.getElementById('searchOverlay');
   const input = document.getElementById('globalSearch');
@@ -1545,6 +1582,7 @@ function openSearchOverlay() {
 }
 
 
+// Hides the global search palette without changing the current route.
 function closeSearch() {
   const overlay = document.getElementById('searchOverlay');
 
@@ -1603,6 +1641,7 @@ function buildSearchHits(q) {
   return hits;
 }
 
+// Displays global search results and connects each result to its action.
 function renderSearch(q) {
   const results = document.getElementById('searchResults');
   if (!results) return;
@@ -1636,6 +1675,7 @@ function renderSearch(q) {
   });
 }
 
+// Supports selecting the first global result or dismissing search by keyboard.
 function handleGlobalSearchKey(event) {
   if (event.key === 'Enter') {
     const first = document.querySelector('#searchResults .search-result');
@@ -1647,6 +1687,7 @@ function handleGlobalSearchKey(event) {
 }
 
 
+// Renders inline sidebar suggestions when that results container is present.
 function renderHeaderSearch(q) {
 
   const results =
@@ -1733,6 +1774,7 @@ function renderHeaderSearch(q) {
 }
 
 
+// Supports keyboard selection and clearing in the sidebar search field.
 function handleHeaderSearchKey(event) {
 
   if (event.key === 'Enter') {
@@ -1759,6 +1801,7 @@ function handleHeaderSearchKey(event) {
 }
 
 
+// Resets sidebar search text and removes any displayed suggestions.
 function clearHeaderSearch() {
 
   const input =
@@ -1779,6 +1822,7 @@ function clearHeaderSearch() {
 }
 
 
+// Prevents content values from being interpreted as HTML when rendered.
 function escapeHtml(value) {
 
   return String(value)
@@ -1790,6 +1834,7 @@ function escapeHtml(value) {
 
 }
 
+// Opens or closes the compact navigation menu on small screens.
 function toggleMenu(){document.getElementById('mobileNav').classList.toggle('open')}
 document.addEventListener('keydown', e => {
 

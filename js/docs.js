@@ -9,7 +9,7 @@ window.SCHOOL_SITE_DOCS = [
         "SchoolSite Pro for ArcGIS Pro 3.3+",
         [
           { "type": "paragraph", "text": "SchoolSite Pro is the planning tool developed and used in-house by MGT staff and also empowers school planners with GIS experience to create student forecasts and attendance-area redistricting plans." },
-          { "type": "paragraph", "text": "It runs as an extension for Esri’s  ArcGIS Pro and helps planners compare planning scenarios with GIS data for analysis and decision-making." }
+          { "type": "paragraph", "text": "As an extension for Esri’s ArcGIS Pro, SchoolSite Pro allows users to compare their plans with the wealth of GIS data available to planners and perform powerful analysis." }
         ]
       ],
       [
@@ -24,7 +24,7 @@ window.SCHOOL_SITE_DOCS = [
         "Manage your data",
         { "type": "list", "items": [
           { "text": "Create your own data", "href": "#doc/create-data-guide", "onClick": "event.preventDefault(); route('doc', 'create-data-guide');" },
-          { "text": "Import and validate your data", "href": "#doc/data-validation", "onClick": "event.preventDefault(); route('doc', 'data-validation');" }
+          { "text": "Import and validate your data", "href": "#doc/data-management", "onClick": "event.preventDefault(); route('doc', 'data-management');" }
         ] }
       ],
       [
@@ -42,6 +42,7 @@ window.SCHOOL_SITE_DOCS = [
       [
         "The Statistics Window",
         { "type": "list", "items": [
+          { "text": "Statistics Window Introduction", "href": "#doc/statistics", "onClick": "event.preventDefault(); route('doc', 'statistics');" },
           { "text": "Statistics Window Tabs", "href": "#doc/stats-tabs", "onClick": "event.preventDefault(); route('doc', 'stats-tabs');" }
         ] }
       ],
@@ -143,7 +144,7 @@ window.SCHOOL_SITE_DOCS = [
       [
         "Manage your data | SchoolSite Pro for ArcGIS Pro 3.3+",
         [
-          { "type": "paragraph", "text": "The heart of SchoolSite Pro is your districtâ€™s data. After your data has been created, the SchoolSite Pro Data Setup tool can help ensure your dataâ€™s compatibility with the rest of the software." },
+          { "type": "paragraph", "text": "The heart of SchoolSite Pro is your district's data. After your data has been created, the SchoolSite Pro Data Setup tool can help ensure your dataâ€™s compatibility with the rest of the software." },
           { "type": "paragraph", "text": "Use the pages below to build the source GIS datasets, then validate them before creating plans and forecasts." }
         ]
       ],
@@ -402,9 +403,9 @@ window.SCHOOL_SITE_DOCS = [
         "Commit the Modification",
         [
           { "type": "ordered", "items": [
-            "If the changes are acceptable, commit the change. In the Assign Tools group, click on Assign Studyareas. The statistics window and map will update.",
+            "If the changes are acceptable, commit the change. In the Assign Tools group, click on Assign Studyareas. The statistics window and map will update. You can roll back your changes prior to permanently saving them by clicking on the Undo button in the Assign Tools group.",
             "If you are certain you want to make your changes permanent, click on Save Assignments in the Assign group.",
-            "When finished, stop the edit session by clicking Stop from the Assign group. Please note: Once you choose to Save Assignments or Stop Assigning, you can no longer undo edits.",
+            "When finished, stop the edit session by clicking Stop from the Assign group. **Please note: Once you choose to Save Assignments or Stop Assigning, you can no longer undo edits.**",
             "If necessary click on Show Statistics, the Current Residence Tab reflects the update.",
             "To review the original statistics when the plan was first created, click on the Original Residence tab."
           ] },
@@ -468,11 +469,11 @@ window.SCHOOL_SITE_DOCS = [
           { "type": "image", "src": "assets/images/schoolsite-open-menu.png", "alt": "SchoolSite Open menu listing plans and forecasts", "caption": "Use the Open dialog to identify maps with plans and forecasts." },
           { "type": "paragraph", "text": "Right-click the map that contains the Plan that you would like to copy and choose Copy. Then, right-click on the Maps folder and click Paste." },
           { "type": "image", "src": "assets/images/copy-plan-map.png", "alt": "Copy and paste a plan map in ArcGIS Pro", "caption": "Choose Copy on the plan map, then Paste in the Maps folder." },
-          { "type": "paragraph", "text": "A copy of your Plan will appear with the same name and the number ?1? at the end." },
+          { "type": "paragraph", "text": "A copy of your Plan will appear with the same name and the number '1' at the end." },
           { "type": "image", "src": "assets/images/copied-plan-map.png", "alt": "Copied redistricting plan shown in the Maps list", "caption": "The copied plan appears with the same name and a suffix of 1." },
           { "type": "paragraph", "text": "At this time, you can now rename your Plan by simply renaming the map as you would any other map in ArcGIS Pro." },
           { "type": "image", "src": "assets/images/rename-plan-map.png", "alt": "Renaming a copied redistricting plan map", "caption": "Rename the plan map in ArcGIS Pro to match your new scenario." },
-          { "type": "paragraph", "text": "SchoolSite Pro will understand that this map contains a plan and will update the Plan?s tables accordingly to update the Plan?s name." }
+          { "type": "paragraph", "text": "SchoolSite Pro will understand that this map contains a plan and will update the Plan's tables accordingly to update the Plan's name." }
         ]
       ]
     ]
@@ -510,11 +511,11 @@ window.SCHOOL_SITE_DOCS = [
           { "type": "paragraph", "text": "To make this possible SchoolSite Pro uses a series of rules or assumptions to govern how students are treated during the redistricting process when using a plan that is set up using both current resident students and current enrollment." },
           { "type": "paragraph", "text": "Assumptions/Software Rules for Redistricting by Enrollment:" },
           { "type": "ordered", "items": [
-            "What happens to a student enrolled at their resident school during a boundary change? It is assumed that any student living in an area of proposed attendance boundary change who is currently enrolled in their resident school will be assigned to the new school of residence.",
-            "What happens to a student who is not enrolled in their school of residence during a boundary change? Any student living in an area of proposed attendance boundary change that is enrolled in a school other than their resident school will be assumed to continue to be enrolled at that other school. Students living in an area not affected by a proposed attendance boundary change will continue to attend their current school of enrollment, even if the school they are attending is involved in a boundary change. (i.e. students who are transferring into a school will be allowed to continue to transfer in).",
-            "What happens to a student enrolled in a district-wide non-attendance boundary school? Students living in a study area who are enrolled in a school without an assigned attendance boundary (i.e. magnet, charter, academy, etc.) will assume to always be enrolled at that school regardless if their study area is reassigned.",
-            "What happens to a student when a new school is opened? In the case of a school opening with a new attendance boundary, it is assumed that all students in the new proposed attendance boundary who are enrolled at their resident school will be reassigned to the new school. All students not enrolled in their resident school in this area will continue with their current school.",
-            "What happens to a student when a school is closed? In the case of school closure, it is assumed that all students enrolled in the school being closed will be reassigned back to their school of residence. [Note: Students who are attending the closed school and have been previously excluded from the redistricting process (i.e. students residing outside of the District, special education students etc.) will be left for the District to decide how to reassign these students to other sites.]"
+            "**What happens to a student enrolled at their resident school during a boundary change?** It is assumed that any student living in an area of proposed attendance boundary change who is currently enrolled in their resident school will be assigned to the new school of residence.",
+            "**What happens to a student who is not enrolled in their school of residence during a boundary change? **Any student living in an area of proposed attendance boundary change that is enrolled in a school other than their resident school will be assumed to continue to be enrolled at that other school. Students living in an area not affected by a proposed attendance boundary change will continue to attend their current school of enrollment, even if the school they are attending is involved in a boundary change. (i.e. students who are transferring into a school will be allowed to continue to transfer in).",
+            "**What happens to a student enrolled in a district-wide non-attendance boundary school?** Students living in a study area who are enrolled in a school without an assigned attendance boundary (i.e. magnet, charter, academy, etc.) will assume to always be enrolled at that school regardless if their study area is reassigned.",
+            "**What happens to a student when a new school is opened?** In the case of a school opening with a new attendance boundary, it is assumed that all students in the new proposed attendance boundary who are enrolled at their resident school will be reassigned to the new school. All students not enrolled in their resident school in this area will continue with their current school.",
+            "**What happens to a student when a school is closed?** In the case of school closure, it is assumed that all students enrolled in the school being closed will be reassigned back to their school of residence. [Note: Students who are attending the closed school and have been previously excluded from the redistricting process (i.e. students residing outside of the District, special education students etc.) will be left for the District to decide how to reassign these students to other sites.]"
           ] },
           { "type": "paragraph", "text": "The end result is a plan that will allow users to see not only the resident student population totals of each attendance area following redistricting but also the estimated enrollment totals of each school as well. An additional tab is included to show the estimated enrollment totals at each school and can be used to help in short term planning." },
           { "type": "paragraph", "text": "Comparing the two sets of numbers gives the user the added advantage of seeing how the District's open enrollment policy and non-attendance area facilities are affecting facility usage as the resident student population numbers of an attendance area can differ greatly from the enrollment totals of the school that an attendance area is serving." }
@@ -2421,19 +2422,19 @@ window.SCHOOL_SITE_DOCS = [
           { "type": "paragraph", "text": "1. Begin the editing session: Choose the assign tab under Redistricting Plan. Then choose Start in the Assign ribbon." },
           { "type": "image", "src": "assets/images/redistrictTab.png", "alt": "Redistricting assign ribbon", "caption": "Start an editing session from the Assign ribbon." },
           { "type": "image", "src": "assets/images/start.png", "alt": "Start button in the redistricting assign ribbon", "caption": "Choose Start to begin assigning study areas." },
-          { "type": "paragraph", "text": "Use Caution when Assigning: When assigning study areas, please refrain from using any other editing tools and only use the Undo button provided in this ribbon. Otherwise, you could experience unexpected results when moving study areas between attendance boundaries. Once you click “Stop Assigning” you can then use all the editing tools and the normal undo button without affecting your plan." },
-          { "type": "paragraph", "text": "2. To reassign study areas from existing schools, from the assign ribbon, click on the drop-down arrow under “Assign study areas to:” and select the school to which you wish to assign the study area(s)." },
+          { "type": "paragraph", "text": "**Use Caution when Assigning:** When assigning study areas, please refrain from using any other editing tools and only use the Undo button provided in this ribbon. Otherwise, you could experience unexpected results when moving study areas between attendance boundaries. Once you click “Stop Assigning” you can then use all the editing tools and the normal undo button without affecting your plan." },
+          { "type": "paragraph", "text": "**2. To reassign study areas from existing schools, from the assign ribbon, click on the drop-down arrow under “Assign study areas to:” and select the school to which you wish to assign the study area(s).**" },
           { "type": "image", "src": "assets/images/assignSchool.png", "alt": "Select a school to receive reassigned study areas", "caption": "Choose the target school for reassignment." },
           { "type": "paragraph", "text": "3. Turn on Labels to view boundary names." },
           { "type": "paragraph", "text": "Contents Pane > Right click on Boundary Plan > Label" },
           { "type": "image", "src": "assets/images/label.png", "alt": "Boundary plan labels turned on", "caption": "Turn on labels so school names are visible on the map." },
-          { "type": "paragraph", "text": "4. Once a school has been chosen, choose a select feature tool from the toolbar. Listed in order, the available selection tools are:" },
+          { "type": "paragraph", "text": "**4. Once a school has been chosen, choose a select feature tool from the toolbar. Listed in order, the available selection tools are:**" },
           { "type": "list", "items": [ "Select Features", "Select by Rectangle", "Select by Polygon", "Select by Lasso", "Select by Circle" ] },
           { "type": "paragraph", "text": "Modifying Boundaries" },
           { "type": "paragraph", "text": "5. After choosing a select tool, click on the study areas to be reassigned to the study area you chose to assign to. The selected study areas are highlighted in bright blue." },
           { "type": "paragraph", "text": "6. To see how the reassignment of the selected study areas would affect that school, click on the Proposed Statistics Tab." },
           { "type": "paragraph", "text": "7. To view only the statistics for the selected study areas, click on the Selected Residence Tab." },
-          // { "type": "paragraph", "text": "See topic “Statistics Window” for more information." },
+          { "type": "paragraph", "text": "See topic “Statistics Window” for more information.", "href": "#doc/statistics", "onClick": "event.preventDefault(); route('doc', 'statistics');" },
           { "type": "paragraph", "text": "Commit the Modification" },
           { "type": "paragraph", "text": "**IMPORTANT: If the changes are acceptable, commit the change. In the assign ribbon, click on Assign Study Areas. If you are certain you want to keep the changes permanently, choose Save Assignments from the assign ribbon. Once you choose to Save Assignments or Stop Assigning, you can no longer undo edits.**" },
           { "type": "image", "src": "assets/images/assignStudyArea.png", "alt": "Assign study areas button", "caption": "Use the assignment tools to commit boundary changes and save the plan." },
