@@ -77,6 +77,11 @@ Keep older release objects unchanged. The page formats headings, bullets, nested
 node --check js/data.js
 #Check for whitespace errors
 git diff --check
+git status
+git add --all
+git commit -m "Describe this commit message"
+git push
+git status
 ```
 
 
