@@ -4,7 +4,7 @@ This file is generated from `js/docs.js` and `js/data.js`. Use it as the primary
 
 Product: SchoolSite Pro
 Requirements: ArcGIS Pro 3.3.0+
-Current release: 1.9.7 (September 16, 2026)
+Current release: 1.9.8 (October 2, 2026)
 
 ## Documentation
 
@@ -3444,15 +3444,27 @@ Image: Export the student summary for the active plan or forecast.
 
 ## Release notes
 
+### Version 1.9.8 (October 2026)
+
+FY27 Q1 Update 1: Feature updates and bug fixes
+
+**New Features:**
+- Update to the Reassign Study Areas feature; locking schools now also can be done for Current Boundaries
+**Minor bugs and UI improvements**
+- SYF calculation tool is only available when imported assessor data is polygon, not point geometry
+- Exporting SYF results now respects Excel sheet name limit and will truncate names to fit instead of failing to export
+- Reassigning a school is now fixed so you can lock schools and revert to or from original boundary configuration
+- Exporting residential forecast results to Excel fails when summarized by ‘Other Value’
+
 ### Version 1.9.7 (September 2026)
 
-FY26 Q4 Update 10 - Patch.
+FY26 Q4 Update 10: Bug patch
 
 - Quick patch to fix an issue when calculation mobility that broke at 1.9.6
 
 ### Version 1.9.6 (September 2026)
 
-FY26 Q4 Update 9.
+FY26 Q4 Update 9: New reports and reporing options
 
 **New Features:**
 - New: Utilization Report. This is now an automated report and used to setup boundary comparison web apps during a rezoning project
@@ -3473,7 +3485,7 @@ FY26 Q4 Update 9.
 
 ### Version 1.9.5 (July 2026)
 
-FY26 Q4 Update 8.
+FY26 Q4 Update 8: New features and performance improvements for residential forecasts.
 
 - User can choose a school to remove, and it will automatically assign those study areas to ‘Unassigned’
 - Exporting a forecast report includes the tabular data and chart in the same file
@@ -3483,7 +3495,7 @@ FY26 Q4 Update 8.
 
 ### Version 1.9.4 (June 2026)
 
-FY26 Q3 Update 7. Introducing new reporting features for residential forecasts.
+FY26 Q3 Update 7: Introducing new reporting features for residential forecasts.
 
 **New Features:**
 - **SYF Automation**
