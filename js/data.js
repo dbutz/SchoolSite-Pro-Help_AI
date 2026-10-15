@@ -1,17 +1,34 @@
 ﻿window.SCHOOL_SITE_RELEASE = {
-  "version": "1.9.7",
-  "releaseDate": "September 16, 2026",
-  "downloadUrl": "https://github.com/dbutz/SchoolSite-Pro-Docs/releases/download/1.9.7/SchoolSite.Pro.1.9.7.zip",
+  "version": "1.9.8",
+  "releaseDate": "October 2, 2026",
+  "downloadUrl": "https://github.com/dbutz/SchoolSite-Pro-Docs/releases/download/1.9.8/SchoolSite.Pro.1.9.8.zip",
   "githubUrl": "https://github.com/dbutz/SchoolSite-Pro-Help_AI",
   "productName": "SchoolSite Pro",
   "requirements": "ArcGIS Pro 3.3.0+"
 };
 
 window.SCHOOL_SITE_RELEASE_NOTES = [
-  {
+    {
+    "version": "1.9.8",
+    "date": "October 2026",
+    "description": "FY27 Q1 Update 1: Feature updates and bug fixes",
+     features: [
+        { type: "heading", text: "New Features:" },
+        { type: "list", items: [
+          "Update to the Reassign Study Areas feature; locking schools now also can be done for Current Boundaries"
+        ] },
+        { type: "heading", text: "Minor bugs and UI improvements" },
+        { type: "list", items: [
+          "SYF calculation tool is only available when imported assessor data is polygon, not point geometry",
+          "Exporting SYF results now respects Excel sheet name limit and will truncate names to fit instead of failing to export",
+          "Reassigning a school is now fixed so you can lock schools and revert to or from original boundary configuration",
+          "Exporting residential forecast results to Excel fails when summarized by ‘Other Value’"
+        ] }
+      ]
+  },{
     "version": "1.9.7",
     "date": "September 2026",
-    "description": "FY26 Q4 Update 10 - Patch.",
+    "description": "FY26 Q4 Update 10: Bug patch",
     "features": [
       "Quick patch to fix an issue when calculation mobility that broke at 1.9.6"
     ]
@@ -19,7 +36,7 @@ window.SCHOOL_SITE_RELEASE_NOTES = [
   {
     "version": "1.9.6",
     "date": "September 2026",
-    "description": "FY26 Q4 Update 9.",
+    "description": "FY26 Q4 Update 9: New reports and reporing options",
     "features": [
       { "type": "heading", "text": "New Features:" },
       { "type": "list", "items": [
@@ -46,7 +63,7 @@ window.SCHOOL_SITE_RELEASE_NOTES = [
   {
     "version": "1.9.5",
     "date": "July 2026",
-    "description": "FY26 Q4 Update 8.",
+    "description": "FY26 Q4 Update 8: New features and performance improvements for residential forecasts.",
     "features": [
       "User can choose a school to remove, and it will automatically assign those study areas to ‘Unassigned’",
       "Exporting a forecast report includes the tabular data and chart in the same file",
@@ -58,7 +75,7 @@ window.SCHOOL_SITE_RELEASE_NOTES = [
   {
     "version": "1.9.4",
     "date": "June 2026",
-    "description": "FY26 Q3 Update 7. Introducing new reporting features for residential forecasts.",
+    "description": "FY26 Q3 Update 7: Introducing new reporting features for residential forecasts.",
     "features": [
       { "type": "heading", "text": "New Features:" },
       { "type": "list", "items": [

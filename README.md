@@ -70,12 +70,16 @@ downloadUrl: "New installer URL"
 
 Keep older release objects unchanged. The page formats headings, bullets, nested bullets, bold text, and quotation marks automatically. Do not change CSS or `index.html` for a new release.
 
-3. Run the checks:
+3. Run the checks from a powershell prompt:
 
 ```powershell
-node --check .\js\data.js
+#Check for syntax errors
+node --check js/data.js
+#Check for whitespace errors
 git diff --check
 ```
+
+
 
 4. Open `index.html#download` and verify the version, date, and installer link.
 
