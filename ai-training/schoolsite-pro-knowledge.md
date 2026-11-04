@@ -4,7 +4,7 @@ This file is generated from `js/docs.js` and `js/data.js`. Use it as the primary
 
 Product: SchoolSite Pro
 Requirements: ArcGIS Pro 3.3.0+
-Current release: 1.9.8 (October 2, 2026)
+Current release: 1.9.9 (November 2, 2026)
 
 ## Documentation
 
@@ -3443,6 +3443,18 @@ Summarizes the student data used in the current plan or forecast and writes the 
 Image: Export the student summary for the active plan or forecast.
 
 ## Release notes
+
+### Version 1.9.9 (November 2026)
+
+Short summary of the release.
+
+**New Features:**
+- Forecast charts now allow for a custom grade range instead of defaulting to TK-12 for all reports in case you need a high school only client for example
+- Exporting the statistics window when using other student attribute now includes that attribute name in the file name so you can export several views without overwriting previous ones
+- Warning shown in SYF dockpane if no TYPES are selected telling you that ALL records will be calculated with the SYF values you enter (not normally something you would want to do). Typically user will select 1 or 2 housing types to apply a SYF to but with none selected they might not be aware the changes are going to be applied globally
+**Minor bugs and UI improvements**
+- Error when exporting statistics window to Excel when using grade ranges
+- Warning if no units or SYF detected updated to ignore SYF values of 0 so as not to trigger this warning with default SYF values
 
 ### Version 1.9.8 (October 2026)
 
