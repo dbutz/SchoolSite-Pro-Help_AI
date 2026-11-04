@@ -1,13 +1,31 @@
 ﻿window.SCHOOL_SITE_RELEASE = {
-  "version": "1.9.8",
-  "releaseDate": "October 2, 2026",
-  "downloadUrl": "https://github.com/dbutz/SchoolSite-Pro-Docs/releases/download/1.9.8/SchoolSite.Pro.1.9.8.zip",
+  "version": "1.9.9",
+  "releaseDate": "November 2, 2026",
+  "downloadUrl": "https://github.com/dbutz/SchoolSite-Pro-Docs/releases/download/1.9.9/SchoolSite.Pro.1.9.9.zip",
   "githubUrl": "https://github.com/dbutz/SchoolSite-Pro-Help_AI",
   "productName": "SchoolSite Pro",
   "requirements": "ArcGIS Pro 3.3.0+"
 };
 
 window.SCHOOL_SITE_RELEASE_NOTES = [
+    {
+    version: "1.9.9",
+    date: "November 2026",
+    description: "Short summary of the release.",
+    features: [
+      { type: "heading", text: "New Features:" },
+      { type: "list", items: [
+        "Forecast charts now allow for a custom grade range instead of defaulting to TK-12 for all reports in case you need a high school only client for example",
+        "Exporting the statistics window when using other student attribute now includes that attribute name in the file name so you can export several views without overwriting previous ones",
+        "Warning shown in SYF dockpane if no TYPES are selected telling you that ALL records will be calculated with the SYF values you enter (not normally something you would want to do). Typically user will select 1 or 2 housing types to apply a SYF to but with none selected they might not be aware the changes are going to be applied globally"
+      ] },
+      { type: "heading", text: "Minor bugs and UI improvements" },
+      { type: "list", items: [
+        "Error when exporting statistics window to Excel when using grade ranges",
+        "Warning if no units or SYF detected updated to ignore SYF values of 0 so as not to trigger this warning with default SYF values"
+      ] }
+    ]
+    },
     {
     "version": "1.9.8",
     "date": "October 2026",
