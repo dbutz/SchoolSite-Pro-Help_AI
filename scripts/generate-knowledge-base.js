@@ -4,6 +4,8 @@ const vm = require('vm');
 
 const root = path.resolve(__dirname, '..');
 const outputPath = path.join(root, 'ai-training', 'schoolsite-pro-knowledge.md');
+const siteHost = fs.readFileSync(path.join(root, 'CNAME'), 'utf8').trim();
+const siteUrl = new URL(`https://${siteHost}`);
 const context = { window: {} };
 vm.createContext(context);
 
@@ -167,6 +169,10 @@ function renderBlocks(blocks) {
 // Exports a documentation article and its sections to the knowledge base.
 function renderDocument(doc) {
   const output = [`## ${doc.title || doc.id}`];
+  if (doc.id) {
+    const articleUrl = new URL(`/#doc/${encodeURIComponent(doc.id)}`, siteUrl);
+    output.push(`Article link: [Open ${doc.title || doc.id}](${articleUrl.href})`);
+  }
   if (doc.summary) output.push(doc.summary);
   if (doc.image?.caption) output.push(`Image: ${doc.image.caption}`);
   for (const section of doc.body || []) {

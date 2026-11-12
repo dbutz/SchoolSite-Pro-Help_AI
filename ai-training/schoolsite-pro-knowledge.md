@@ -12,6 +12,8 @@ Current release: 1.9.9 (November 2, 2026)
 
 ## Welcome to SchoolSite Pro
 
+Article link: [Open Welcome to SchoolSite Pro](https://www.schoolsite.pro/#doc/home)
+
 ### SchoolSite Pro for ArcGIS Pro 3.3+
 
 SchoolSite Pro is the planning tool developed and used in-house by MGT staff and also empowers school planners with GIS experience to create student forecasts and attendance-area redistricting plans.
@@ -59,6 +61,8 @@ As an extension for Esri’s ArcGIS Pro, SchoolSite Pro allows users to compare 
 
 ## Get Started
 
+Article link: [Open Get Started](https://www.schoolsite.pro/#doc/get-started)
+
 Installation, system requirements, licensing, and the basic SchoolSite Pro interface.
 
 SchoolSite Pro is the latest professional desktop GIS school planning application from Davis Demographics. The sections below introduce basic elements of the user interface.
@@ -95,6 +99,8 @@ SchoolSite Pro uses a single-user licensing model on a subscription basis. A lic
 
 ## Manage your data
 
+Article link: [Open Manage your data](https://www.schoolsite.pro/#doc/data-management)
+
 Prepare, create, import, and validate the district data used by SchoolSite Pro.
 
 Image: Data Setup validates the datasets used by SchoolSite Pro.
@@ -124,6 +130,8 @@ Use the pages below to build the source GIS datasets, then validate them before 
 - Data checks made for SchoolSite Locator
 
 ## Organizing your data
+
+Article link: [Open Organizing your data](https://www.schoolsite.pro/#doc/organizing-data)
 
 A practical structure for GIS data, school years, maps, forecasts, and redistricting plans.
 
@@ -171,6 +179,8 @@ The SchoolSite Pro folder can be organized in a variety of ways. One solution is
 
 ## What are Study Areas?
 
+Article link: [Open What are Study Areas?](https://www.schoolsite.pro/#doc/study-areas)
+
 Study Areas are the geographic building blocks used to collect data and model attendance boundaries.
 
 Image: Study Areas provide the geographic units used for student and boundary analysis.
@@ -213,6 +223,8 @@ Study area boundaries in established neighborhoods, however, should never change
 
 ## SchoolSite Pro Redistricting Plans
 
+Article link: [Open SchoolSite Pro Redistricting Plans](https://www.schoolsite.pro/#doc/redistricting)
+
 Create, compare, modify, analyze and share attendance-boundary scenarios.
 
 Image: The Assign ribbon contains the core redistricting controls.
@@ -224,6 +236,8 @@ Welcome to the SchoolSite Pro Redistricting Extension. With this extension, you 
 Using a Study/Planning Area map of the District, alternative school boundary plans can initially be developed based on either existing attendance areas, by closest school, by capacity or by a maximum number of students. Study Areas can then be individually reassigned to other school locations to balance student population by residence and site capacities. Additional sites can be added simulating the opening of a new school or surplus sites can be deleted simulating the closing of a school. As boundaries are modified, classroom requirements to house students at each site are reported by grade level. The user can immediately see the effects on facility needs with each plan. The effect of class size reduction at various grade levels has never been easier!
 
 ## A tour of the redistricting ribbon
+
+Article link: [Open A tour of the redistricting ribbon](https://www.schoolsite.pro/#doc/redistricting-tour)
 
 Use the Statistics Window and Assign ribbon to inspect and change attendance areas.
 
@@ -289,6 +303,8 @@ Image: The selected tab shows the statistics for the current selection.
 Image: Use the assignment tools to commit boundary changes and save the plan.
 
 ## Create a new redistricting plan
+
+Article link: [Open Create a new redistricting plan](https://www.schoolsite.pro/#doc/create-plan)
 
 Three supported plan types: current residence, resident + current enrollment, and forecast-based planning.
 
@@ -356,6 +372,8 @@ SchoolSite Pro will understand that this map contains a plan and will update the
 
 ## Redistrict based on current resident students
 
+Article link: [Open Redistrict based on current resident students](https://www.schoolsite.pro/#doc/plan-residence)
+
 Create a plan using current resident student population by school type.
 
 Image: A residence-based plan uses current resident students by school type.
@@ -365,6 +383,8 @@ Image: A residence-based plan uses current resident students by school type.
 To create a new redistricting plan based on current resident students, on the SchoolSite ribbon, click Create, then Plan. A Create dockpane will display. Make sure the Residence tab is selected. Type in the name of your plan and select the type of Plan you wish to create by selecting your District’s Elementary, Middle, Intermediate or High School boundaries. You can also choose to include additional student types in your plan. Click the Finish button when done. The plan will take a few minutes to create. Plan creation for larger school districts take additional time based upon the number of study areas, number of students, number of fields on the student attribute table and the processing power of your computer.
 
 ## Redistrict based on resident students and current enrollment
+
+Article link: [Open Redistrict based on resident students and current enrollment](https://www.schoolsite.pro/#doc/plan-enrollment)
 
 Estimate where students are likely to attend after boundary changes using current enrollment rules.
 
@@ -394,6 +414,8 @@ Comparing the two sets of numbers gives the user the added advantage of seeing h
 
 ## Redistrict based on a forecast
 
+Article link: [Open Redistrict based on a forecast](https://www.schoolsite.pro/#doc/plan-forecast)
+
 Create a redistricting plan from an existing forecast.
 
 ### Redistrict based on a forecast | SchoolSite Pro for ArcGIS Pro 3.3+
@@ -411,6 +433,8 @@ Image: Choose an existing forecast and then finish creating the redistricting pl
 Click the Finish button when done. The plan will take a few minutes to create. Plan creation for larger school districts take additional time based upon the number of study areas, number of students, number of fields on the student attribute table and the processing power of your computer.
 
 ## Redistrict by changing boundaries and schools
+
+Article link: [Open Redistrict by changing boundaries and schools](https://www.schoolsite.pro/#doc/modify-plans)
 
 Reassign Study Areas, add or close schools, and immediately see facility impacts.
 
@@ -435,6 +459,8 @@ Additional topics:
 - Reassign schools
 
 ## Share your redistricting plan
+
+Article link: [Open Share your redistricting plan](https://www.schoolsite.pro/#doc/share-plan)
 
 Export plan outputs and prepare results for stakeholders.
 
@@ -488,6 +514,8 @@ Local export options:
 - Export Plan as Study Areas: Export your current boundaries in study area format. The results will be located in your project’s default geodatabase.
 
 ## The Statistics Window
+
+Article link: [Open The Statistics Window](https://www.schoolsite.pro/#doc/statistics)
 
 Inspect student counts and attendance-area totals while developing a plan.
 
@@ -554,6 +582,8 @@ Image: Use the forecast year drop-down to review future-year plan results.
 
 ## Statistics Window Tabs
 
+Article link: [Open Statistics Window Tabs](https://www.schoolsite.pro/#doc/stats-tabs)
+
 Different tabs expose different views of district student data.
 
 Image: Current Residence shows the resident counts before assignments are applied.
@@ -608,6 +638,8 @@ The Estimated Enrollment Tab displays theoretical school enrollment totals as st
 
 ## Student Forecasts
 
+Article link: [Open Student Forecasts](https://www.schoolsite.pro/#doc/forecasts)
+
 Project resident and enrollment changes using birth rates, mobility, housing and historical transfer patterns.
 
 ### Overview
@@ -646,6 +678,8 @@ Image: The Forecasting ribbon provides access to forecast setup, factor editing,
 - Project summary report
 
 ## A tour of the forecast ribbon
+
+Article link: [Open A tour of the forecast ribbon](https://www.schoolsite.pro/#doc/forecast-tour)
 
 Understand the forecasting ribbon, factor editing, reports and map display.
 
@@ -732,6 +766,8 @@ In this example, we are assuming that 0.2527 K-6 students will be generated for 
 
 ## Create a new forecast
 
+Article link: [Open Create a new forecast](https://www.schoolsite.pro/#doc/create-forecast)
+
 Create a residential forecast with optional tract and assessor data.
 
 Image: Create a forecast by naming the map, selecting student types, and choosing a base year.
@@ -796,6 +832,8 @@ SchoolSite Pro will understand that this map contains a Forecast and will update
 
 ## Modify forecast factors
 
+Article link: [Open Modify forecast factors](https://www.schoolsite.pro/#doc/modify-factors)
+
 Adjust the variables that drive residential forecasting and housing projections.
 
 ### Overview
@@ -823,6 +861,8 @@ Each factor contains a setup section and a table of values for the selected geog
 Some factors affect the Kindergarten cohort, mobility by grade, housing yield assumptions, or the development-based maturation model. Adjusting the factors lets you test alternative scenarios before finalizing boundary or staffing decisions.
 
 ## Generate a forecast report
+
+Article link: [Open Generate a forecast report](https://www.schoolsite.pro/#doc/forecast-report)
 
 Configure and export forecast results by geography, grades and projection years.
 
@@ -857,6 +897,8 @@ The first option What do you want to display? has three choices: By Study Area, 
 
 ## Include historical student data in your report
 
+Article link: [Open Include historical student data in your report](https://www.schoolsite.pro/#doc/historical)
+
 Include up to three years of historical data and choose a weighted mobility option.
 
 ### Include historical student data in your report
@@ -882,6 +924,8 @@ When you are finished, click Import.
 Displaying your imported historical student data on your forecast report is easy. On the Forecasting ribbon, click Forecast Reports. A dockpane will show up called forecast Report. If you have imported your historical student data, click the box next to Display historical student data. Then click Run. You will notice that your report now includes two or three additional columns of historical student data to the leftmost of your original report.
 
 ## About Enrollment Forecasts
+
+Article link: [Open About Enrollment Forecasts](https://www.schoolsite.pro/#doc/enrollment)
 
 Estimate future school enrollment for short-term staffing and budget planning.
 
@@ -913,6 +957,8 @@ To calculate an enrollment forecast for schools without attendance boundaries, a
 
 ## Reporting in SchoolSite Pro
 
+Article link: [Open Reporting in SchoolSite Pro](https://www.schoolsite.pro/#doc/reports-overview)
+
 A map of every report type available across Data Setup, Redistricting, Forecasting and Analysis.
 
 ### Where reports live
@@ -930,6 +976,8 @@ Most reports can be exported to Microsoft Excel (.xlsx); forecast-oriented repor
 ## Esri Business Analyst Services
 
 ## Demographic Reports
+
+Article link: [Open Demographic Reports](https://www.schoolsite.pro/#doc/esri-demographic-reports)
 
 Create demographic and community reports for a selected study area using Esri Business Analyst Online data.
 
@@ -1031,6 +1079,8 @@ The All Polygons option supports batch generation for up to 100 polygon features
 
 ## Walk Zone Analysis
 
+Article link: [Open Walk Zone Analysis](https://www.schoolsite.pro/#doc/esri-walkzone)
+
 Create travel-time and distance service areas around selected schools using network analysis.
 
 Image: Walk Zone Analysis creates service areas around schools based on travel time or distance.
@@ -1119,6 +1169,8 @@ The Run button is available when a school layer has been selected, at least one 
 
 ## Program Placement Analysis (Location Allocation)
 
+Article link: [Open Program Placement Analysis (Location Allocation)](https://www.schoolsite.pro/#doc/esri-location-allocation)
+
 Identify the optimal school locations that best serve student demand while considering capacity and the number of facilities to select.
 
 Image: Location Allocation identifies optimal school locations.
@@ -1206,6 +1258,8 @@ The Location Allocation tool uses an ArcGIS Online analysis service and consumes
 
 ## How To Create Your Own Data
 
+Article link: [Open How To Create Your Own Data](https://www.schoolsite.pro/#doc/create-data-guide)
+
 Prepare the source GIS datasets required for SchoolSite Pro workflows.
 
 ### How To Create Your Own Data | SchoolSite Pro for ArcGIS Pro 3.3+
@@ -1242,6 +1296,8 @@ Each dataset has specific attribute requirements, and additional fields may be a
 - Creating Streets
 
 ## Creating Study Areas
+
+Article link: [Open Creating Study Areas](https://www.schoolsite.pro/#doc/create-study-areas)
 
 Create the polygon feature class used as the geographic foundation for plans and forecasts.
 
@@ -1304,6 +1360,8 @@ The following fields are required for SchoolSite Pro Locator, but are only used 
 - Creating Assessor Data
 
 ## Creating Students
+
+Article link: [Open Creating Students](https://www.schoolsite.pro/#doc/create-students)
 
 Create the point feature class that supplies resident and enrollment student records.
 
@@ -1464,6 +1522,8 @@ Students must be geocoded by residence in order to perform redistricting and to 
 
 ## Creating Schools
 
+Article link: [Open Creating Schools](https://www.schoolsite.pro/#doc/create-schools)
+
 Create the point feature class containing school locations, grade coverage and capacity.
 
 ### Creating Schools | SchoolSite Pro for ArcGIS Pro 3.3+
@@ -1521,6 +1581,8 @@ The following fields are required only for SchoolSite Locator, but are not requi
 - Individual school codes must be unique.
 
 ## Creating Tracts
+
+Article link: [Open Creating Tracts](https://www.schoolsite.pro/#doc/create-tracts)
 
 Create polygon housing-development data for projected units and residential forecasting.
 
@@ -1626,6 +1688,8 @@ Image: Forecast output after applying tract phasing and student yield factors.
 
 ## Creating Assessor Data
 
+Article link: [Open Creating Assessor Data](https://www.schoolsite.pro/#doc/create-assessor)
+
 Create assessor or parcel data used for current housing and maturation calculations.
 
 ### Creating Assessor Data | SchoolSite Pro for ArcGIS Pro 3.3+
@@ -1663,6 +1727,8 @@ See topic Maturation Methodology to learn how assessor data is used in Maturatio
 
 ## Creating Trustee Areas
 
+Article link: [Open Creating Trustee Areas](https://www.schoolsite.pro/#doc/create-trustee-areas)
+
 Create trustee-area polygons for district governance and reporting context.
 
 ### Creating Trustee Areas | SchoolSite Pro for ArcGIS Pro 3.3+
@@ -1676,6 +1742,8 @@ A trustee area is a polygon dataset with each polygon assigned to a specific boa
 3. **WEBSITE** - A field containing the web address of the Trustee, defined as data type “Text” with a length of 150.
 
 ## Creating Streets
+
+Article link: [Open Creating Streets](https://www.schoolsite.pro/#doc/create-streets)
 
 Create the street line dataset used by Street Directory workflows.
 
@@ -1708,6 +1776,8 @@ As previously mentioned, many government agencies are maintaining their data wit
 
 ## Data Validation
 
+Article link: [Open Data Validation](https://www.schoolsite.pro/#doc/data-validation)
+
 Validate imported feature classes and their relationships before planning.
 
 ### Importing and validating | SchoolSite Pro for ArcGIS Pro 3.3+
@@ -1724,6 +1794,8 @@ Warnings identify items to review; errors must be corrected before the related w
 - Data checks made for SchoolSite Locator
 
 ## Using Data Setup
+
+Article link: [Open Using Data Setup](https://www.schoolsite.pro/#doc/data-setup)
 
 Import and validate district GIS data before creating plans and forecasts.
 
@@ -1790,6 +1862,8 @@ If you need further assistance, the list of warnings and errors in the Data Setu
 
 ## Data Checks Made for Redistricting Plans - SEE NOTES
 
+Article link: [Open Data Checks Made for Redistricting Plans - SEE NOTES](https://www.schoolsite.pro/#doc/validate-redistricting)
+
 Below is a list of the data checks that SchoolSite Pro makes when using Data Setup specifically for redistricting plans.
 
 ### Data Checks Made for Redistricting Plans - SEE NOTES | SchoolSite Pro for ArcGIS Pro 3.3+
@@ -1798,6 +1872,8 @@ Below is a list of the data checks that SchoolSite Pro makes when using DataSetu
 
 ## Data Checks Made for Forecasts - SEE NOTES
 
+Article link: [Open Data Checks Made for Forecasts - SEE NOTES](https://www.schoolsite.pro/#doc/validate-forecasts)
+
 Below is a list of the data checks that SchoolSite Pro makes when using Data Setup specifically for use in forecasts.
 
 ### Data Checks Made for Forecasts - SEE NOTES | SchoolSite Pro for ArcGIS Pro 3.3+
@@ -1805,6 +1881,8 @@ Below is a list of the data checks that SchoolSite Pro makes when using Data Set
 Below is a list of the data checks that SchoolSite Pro makes when using Data Setup specifically for use in forecasts.
 
 ## Data Checks Made for Locator
+
+Article link: [Open Data Checks Made for Locator](https://www.schoolsite.pro/#doc/validate-locator)
 
 Validate the individual datasets used by SchoolSite Locator workflows.
 
@@ -1831,6 +1909,8 @@ This check helps ensure school and Study Area information are aligned so locator
 ## Redistricting
 
 ## Change Boundaries Between Schools
+
+Article link: [Open Change Boundaries Between Schools](https://www.schoolsite.pro/#doc/change-boundaries)
 
 Edit assignments, inspect proposed statistics and commit attendance-area changes.
 
@@ -1886,6 +1966,8 @@ Image: Use the assignment tools to commit boundary changes and save the plan.
 
 ## Add an Existing School
 
+Article link: [Open Add an Existing School](https://www.schoolsite.pro/#doc/add-existing-school)
+
 Add a school from the district data to an open redistricting plan.
 
 ### Add an existing school | SchoolSite Pro for ArcGIS Pro 3.3+
@@ -1899,6 +1981,8 @@ Image: Use Update Schools to add an existing school to the active plan.
 All schools not represented in the current active plan are listed in the drop-down box. Choose one of the schools, then click OK. SchoolSite will add the school point location to the map and add the name of the school and a new color to the plan in the table of contents. You may now start assigning study areas to the added school.
 
 ## Add a New School
+
+Article link: [Open Add a New School](https://www.schoolsite.pro/#doc/add-new-school)
 
 Simulate opening a new school and assign Study Areas to it.
 
@@ -1918,6 +2002,8 @@ The name of the new school will appear in the school field of the Redistricting 
 
 ## Close Schools
 
+Article link: [Open Close Schools](https://www.schoolsite.pro/#doc/close-schools)
+
 Remove unassigned schools from a plan to simulate closing a campus.
 
 ### Close schools | SchoolSite Pro for ArcGIS Pro 3.3+
@@ -1931,6 +2017,8 @@ Image: Remove unassigned schools from the plan after reassigning all impacted st
 To reassign study areas read the Changing Boundaries Between Schools topic.
 
 ## Reassign Schools
+
+Article link: [Open Reassign Schools](https://www.schoolsite.pro/#doc/reassign-schools)
 
 Use bulk reassignment methods to rebuild attendance boundaries by planning rule.
 
@@ -1959,6 +2047,8 @@ Image: Maximum-student reassignment highlights areas that may require a new scho
 
 ## Configure the Look of Your Map
 
+Article link: [Open Configure the Look of Your Map](https://www.schoolsite.pro/#doc/map-display)
+
 Control how forecast results are symbolized and labeled in ArcGIS Pro.
 
 ### Configure the look of your map
@@ -1982,6 +2072,8 @@ You will notice a legend in your Contents dockpane with a range of numbers assig
 
 ## Development Summary Report
 
+Article link: [Open Development Summary Report](https://www.schoolsite.pro/#doc/development-summary)
+
 Summarize projected housing development, units and students by phase and year.
 
 ### Overview
@@ -2001,6 +2093,8 @@ The Projected Housing Units dockpane will display. At the bottom of the form, cl
 A pop-up will display with the location of the report when it finishes generating.
 
 ## Project Summary Report
+
+Article link: [Open Project Summary Report](https://www.schoolsite.pro/#doc/project-summary)
 
 Review a project-level summary of plans, forecasts, schools and programs.
 
@@ -2022,6 +2116,8 @@ A pop-up will display with the location of the report when it finishes generatin
 
 ## Include Maturation Data in Your Forecast
 
+Article link: [Open Include Maturation Data in Your Forecast](https://www.schoolsite.pro/#doc/maturation-data)
+
 Use current housing, planned development, potential development and maturation Student Yield Factors for long-range projections.
 
 ### Include maturation data in your forecast
@@ -2035,6 +2131,8 @@ Including maturation data into your forecast can lead to more accurate predictio
 - More about Maturation student yield factors
 
 ## Maturation Concept
+
+Article link: [Open Maturation Concept](https://www.schoolsite.pro/#doc/maturation-concept)
 
 Understand how housing occupancy and student yields mature over time.
 
@@ -2059,6 +2157,8 @@ In the plan shown below for year 2005, none of the future schools identified at 
 In general, planning through the use of both maturation and short to mid-term forecasts provides an orderly method to determine future school site needs and timing while at the same time assisting the district in making attendance boundary decisions that make sense over the long run. As the district updates short to mid-term forecasts each year, progress should be made towards the Master Plan of the district. Maturation forecasts should be updated every three to five years as new development plans become available or more often if major land use and/or zoning changes occur.
 
 ## Maturation Methodology
+
+Article link: [Open Maturation Methodology](https://www.schoolsite.pro/#doc/maturation-methodology)
 
 Review the methodology for current housing, planned development, potential development and maturation yields.
 
@@ -2090,6 +2190,8 @@ As in the ten year forecast which may use new residential development, student y
 
 ## More About Current Housing Units
 
+Article link: [Open More About Current Housing Units](https://www.schoolsite.pro/#doc/housing-units)
+
 Use assessor data and projected housing units to model current and future development.
 
 ### More about Current Housing Units
@@ -2113,6 +2215,8 @@ Modifying Projected Housing Units for a Projection with Assessor Data
 The screen below illustrates current housing units from the assessor data in Year0 for several study areas. You have the option to modify these numbers of housing units if you have data that indicates otherwise.
 
 ## More About Potential Development
+
+Article link: [Open More About Potential Development](https://www.schoolsite.pro/#doc/potential-development)
 
 Estimate development potential and enter assumptions for future housing growth.
 
@@ -2141,6 +2245,8 @@ Entering Potential Development
 
 ## More About Maturation Student Yield Factors
 
+Article link: [Open More About Maturation Student Yield Factors](https://www.schoolsite.pro/#doc/maturation-student-yield)
+
 Calculate and enter Student Yield Factors for fully matured development.
 
 ### More about Maturation Student Yield Factors
@@ -2168,6 +2274,8 @@ Or, you can click on the top of the column of the year you wish to change and en
 
 ## Distributed Enrollment
 
+Article link: [Open Distributed Enrollment](https://www.schoolsite.pro/#doc/distributed-enrollment)
+
 Distribute mature forecasted students across grades using weighted factors.
 
 ### Distributed Enrollment
@@ -2191,6 +2299,8 @@ Modifying Distributed Enrollment Factors
 By default, the factors above are applied. To modify the high school level Distributed Enrollment Factors:
 
 ## Kindergarten and Pre-Kindergarten Birth Factors
+
+Article link: [Open Kindergarten and Pre-Kindergarten Birth Factors](https://www.schoolsite.pro/#doc/birth-factors)
 
 Calculate and enter birth factors for incoming PK and kindergarten students.
 
@@ -2226,6 +2336,8 @@ Or you can click on the top of the column of the year you wish to change and ent
 
 ## Mobility Factors
 
+Article link: [Open Mobility Factors](https://www.schoolsite.pro/#doc/mobility-factors)
+
 Calculate mobility from historical student movement into and out of existing housing.
 
 ### Mobility Factors
@@ -2243,6 +2355,8 @@ Mobility is calculated for each grade in the district. Comparison is made betwee
 **Please Note: In general, mobility factors should have a tendency to vary closely to 1.00 unless there are extreme drop-outs or movement from private schools or other factors. If your calculated mobility factors are extremely higher or lower than 1.00, you may wish to check your enrollment counts and/or factor calculations. If hard copy enrollment reports by school are used (due to the fact you do not have historical geocoded student data), you should be careful of your calculations for schools in areas that have had attendance boundary changes as these would have a tendency to skew your calculations.**
 
 ## Calculating Projected Housing Units
+
+Article link: [Open Calculating Projected Housing Units](https://www.schoolsite.pro/#doc/projected-housing)
 
 Calculate, modify and recalculate projected housing units for forecast phases.
 
@@ -2280,6 +2394,8 @@ By choosing “Create Development Summary” you will get the Residential Develo
 
 ## Student Counts
 
+Article link: [Open Student Counts](https://www.schoolsite.pro/#doc/student-counts)
+
 Review and enter current student counts by Study Area and grade.
 
 ### Student Counts
@@ -2301,6 +2417,8 @@ Under the section “Specify study areas to modify by:”, choose between a curr
 Click individual cells in the Student Counts table to change and type in the number of students by grade per study area.
 
 ## Student Yield Factors
+
+Article link: [Open Student Yield Factors](https://www.schoolsite.pro/#doc/student-yield-factors)
 
 Estimate students generated by recently built housing units.
 
@@ -2337,6 +2455,8 @@ Entering Student Yield Factors
 
 ## Business Analyst Report Is Empty
 
+Article link: [Open Business Analyst Report Is Empty](https://www.schoolsite.pro/#doc/troubleshoot-bao-report)
+
 Troubleshoot empty Esri Business Analyst reports.
 
 ### Error
@@ -2349,6 +2469,8 @@ Verify the selected geography, ArcGIS Online connection, service credits and Bus
 
 ## Edit Error
 
+Article link: [Open Edit Error](https://www.schoolsite.pro/#doc/troubleshoot-edit-error)
+
 Troubleshoot editing errors while modifying plans or source data.
 
 ### Error
@@ -2360,6 +2482,8 @@ Editing can fail when the map, layer, workspace or current assignment session is
 Confirm the correct plan is open, stop conflicting edits, verify layer permissions and retry the operation.
 
 ## Export to Excel Error
+
+Article link: [Open Export to Excel Error](https://www.schoolsite.pro/#doc/troubleshoot-excel-export)
 
 Troubleshoot failures when exporting SchoolSite reports to Excel.
 
@@ -2375,6 +2499,8 @@ Close the existing workbook, verify the Project home directory and permissions, 
 
 ## Upgrading to SchoolSite Pro
 
+Article link: [Open Upgrading to SchoolSite Pro](https://www.schoolsite.pro/#doc/faq-upgrading-pro)
+
 Reference guidance for upgrading from earlier SchoolSite releases.
 
 ### Upgrade
@@ -2389,6 +2515,8 @@ Run Data Setup and review release notes for changes that affect existing plans, 
 
 ## Release Notes
 
+Article link: [Open Release Notes](https://www.schoolsite.pro/#doc/release-notes)
+
 Current build changes and recent feature history.
 
 ### Build 1.9.6 FY26 Q4 Update 9 (Sep26) | SchoolSite Pro for ArcGIS Pro 3.3+
@@ -2398,6 +2526,8 @@ Current build changes and recent feature history.
 ## FAQ
 
 ## What kind of data do I need?
+
+Article link: [Open What kind of data do I need?](https://www.schoolsite.pro/#doc/faq-data)
 
 The core GIS and student datasets needed by SchoolSite Pro.
 
@@ -2433,6 +2563,8 @@ Each of the three dataset attributes must be precisely defined in order to run t
 - How to Create Your Own Data
 
 ## Where can I obtain data?
+
+Article link: [Open Where can I obtain data?](https://www.schoolsite.pro/#doc/faq-obtain)
 
 Common public and commercial sources for street and GIS data.
 
@@ -2470,6 +2602,8 @@ However, if the District would rather have Davis Demographics create the data, w
 
 ## Student Yield Factor Report
 
+Article link: [Open Student Yield Factor Report](https://www.schoolsite.pro/#doc/reports-student-yield-factor)
+
 Export calculated student yield factors by geography and school level to Excel.
 
 ### Where to find it in SchoolSite Pro
@@ -2490,6 +2624,8 @@ Image: Student Yield Factor report export output in Excel.
 
 ## Automated Attendance Matrix
 
+Article link: [Open Automated Attendance Matrix](https://www.schoolsite.pro/#doc/reports-attendance-matrix)
+
 Export the relationship between a student's resident boundary and enrolled school to Excel.
 
 ### Where to find it in SchoolSite Pro
@@ -2507,6 +2643,8 @@ Export the attendance matrix, including the configured grade bands and school re
 Image: Automated Attendance Matrix export output in Excel.
 
 ## Street Directory Report
+
+Article link: [Open Street Directory Report](https://www.schoolsite.pro/#doc/reports-street-directory)
 
 Export a district street directory with the corresponding schools of assignment.
 
@@ -2528,6 +2666,8 @@ Image: Street Directory export output in Excel.
 
 ## Address Directory Report
 
+Article link: [Open Address Directory Report](https://www.schoolsite.pro/#doc/reports-address-directory)
+
 Export every address point or parcel and its corresponding schools of assignment.
 
 ### Where to find it in SchoolSite Pro
@@ -2548,6 +2688,8 @@ Image: Address Directory export output in Excel.
 
 ## Utilization Report
 
+Article link: [Open Utilization Report](https://www.schoolsite.pro/#doc/reports-utilization)
+
 Create a standardized utilization output using attendance, grade bands, capacity, transfers, and adjustments.
 
 ### Where to find it in SchoolSite Pro
@@ -2565,6 +2707,8 @@ Generate the UTA table and export the standardized utilization output to Excel.
 Image: Utilization Report export option.
 
 ## Student Reports
+
+Article link: [Open Student Reports](https://www.schoolsite.pro/#doc/reports-student)
 
 Generate quick student reports by grade and other selected student attributes.
 
@@ -2584,6 +2728,8 @@ Image: Student Reports output in Excel.
 
 ## Export Event Log
 
+Article link: [Open Export Event Log](https://www.schoolsite.pro/#doc/reports-event-log)
+
 Export the project event history to Excel for analysis or technical support.
 
 ### Where to find it in SchoolSite Pro
@@ -2601,6 +2747,8 @@ Export the event log as an Excel file in the project home directory.
 Image: Export Event Log output in Excel.
 
 ## Plan Statistics Report
+
+Article link: [Open Plan Statistics Report](https://www.schoolsite.pro/#doc/reports-plan-statistics)
 
 Export the currently selected Statistics Window tab to Excel.
 
@@ -2620,6 +2768,8 @@ Image: The selected plan statistics are exported to an Excel workbook.
 
 ## Plan Impact Summary Report
 
+Article link: [Open Plan Impact Summary Report](https://www.schoolsite.pro/#doc/reports-plan-impact-summary)
+
 Export impacted study areas and impacted students based on boundary changes.
 
 ### Where to find it in SchoolSite Pro
@@ -2637,6 +2787,8 @@ Generate the impacted study areas and impacted students outputs, then export the
 Image: Plan Impact Summary output shows impacted student records and map results.
 
 ## Plan Summary Report
+
+Article link: [Open Plan Summary Report](https://www.schoolsite.pro/#doc/reports-plan-summary)
 
 Show how forecasted resident students are grouped into proposed attendance areas.
 
@@ -2658,6 +2810,8 @@ Image: Plan Summary Report output shows forecasted resident students grouped int
 
 ## Program Summary Report
 
+Article link: [Open Program Summary Report](https://www.schoolsite.pro/#doc/reports-program-summary)
+
 Summarize programs, program changes, school capacities, and capacity changes caused by program placement.
 
 ### Where to find it in SchoolSite Pro
@@ -2676,6 +2830,8 @@ Image: Program Summary Report output shows program and capacity information.
 
 ## Export Statistics
 
+Article link: [Open Export Statistics](https://www.schoolsite.pro/#doc/reports-export-statistics)
+
 Export the SchoolSite Pro plan statistics table in Excel format.
 
 ### Where to find it in SchoolSite Pro
@@ -2693,6 +2849,8 @@ Export the active SchoolSite plan statistics table to Excel.
 Image: Export Statistics creates an Excel workbook with the selected statistics table.
 
 ## Forecast Reports
+
+Article link: [Open Forecast Reports](https://www.schoolsite.pro/#doc/reports-forecast)
 
 Create forecast reports by geography and selected grade ranges, with text and Excel export options.
 
@@ -2716,6 +2874,8 @@ Image: Enrollment Forecast Report output in textfile.
 
 ## Mobility Summary Report
 
+Article link: [Open Mobility Summary Report](https://www.schoolsite.pro/#doc/reports-mobility-summary)
+
 Export mobility values by school and grade, including counts and percentages used in the calculation.
 
 ### Where to find it in SchoolSite Pro
@@ -2733,6 +2893,8 @@ Export the mobility summary to Excel, including raw student counts and percentag
 Image: Mobility Summary export output in Excel.
 
 ## Development Summary Report
+
+Article link: [Open Development Summary Report](https://www.schoolsite.pro/#doc/reports-development-summary)
 
 Export a summary of projected housing development and related student yield assumptions.
 
@@ -2752,6 +2914,8 @@ Image: Development Summary export output in Excel.
 
 ## Projects Summary Report
 
+Article link: [Open Projects Summary Report](https://www.schoolsite.pro/#doc/reports-projects-summary)
+
 Export the projected housing projects included in the forecast.
 
 ### Where to find it in SchoolSite Pro
@@ -2770,6 +2934,8 @@ Image: Projects Summary export output in Excel.
 
 ## Export Student Report
 
+Article link: [Open Export Student Report](https://www.schoolsite.pro/#doc/reports-student-forecast)
+
 Export the student data used in an active forecast or plan to Excel.
 
 ### Where to find it in SchoolSite Pro
@@ -2787,6 +2953,8 @@ Export the student summary report to an Excel file stored in this Project's home
 Image: Student Report output.
 
 ## Enrollment Forecast Report
+
+Article link: [Open Enrollment Forecast Report](https://www.schoolsite.pro/#doc/reports-enrollment-forecast)
 
 Export an enrollment forecast report in XLSX format.
 
